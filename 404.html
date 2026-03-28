@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>404 – terminal velocity_</title>
+<meta name="description" content="Page not found."/>
+<meta property="og:title" content="404 – terminal velocity_"/>
+<meta property="og:description" content="Page not found."/>
+<meta property="og:url" content="https://terminalvelocity.me/404"/>
+<meta property="og:image" content="https://terminalvelocity.me/assets/og-card.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  body {
+    background-color: #fcfbf7;
+    background-image: radial-gradient(circle, #d1d1cc 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  #glow-overlay {
+    position: fixed; inset: 0; pointer-events: none; z-index: 1;
+    background: radial-gradient(circle 160px at var(--mouse-x, -200px) var(--mouse-y, -200px), rgba(101, 88, 181, 0.25) 0%, transparent 100%);
+    opacity: var(--glow-opacity, 0); transition: opacity 0.3s ease;
+  }
+  #glow-dots {
+    position: fixed; inset: 0; pointer-events: none; z-index: 2;
+    background-image: radial-gradient(circle, #6558b5 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    mask-image: radial-gradient(circle 120px at var(--mouse-x, -200px) var(--mouse-y, -200px), black 0%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle 120px at var(--mouse-x, -200px) var(--mouse-y, -200px), black 0%, transparent 100%);
+    opacity: var(--glow-opacity, 0); transition: opacity 0.3s ease;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  .cursor-blink {
+    animation: blink 1s step-end infinite;
+  }
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+</style>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface": "#fcfbf7",
+          "surface-dim": "#f5f4f0",
+          "on-surface": "#1c1c1c",
+          "primary": "#6558b5",
+          "secondary-accent": "#df8e1d",
+          "surface-container": "#f1f0ec",
+          "outline-variant": "#d1d1cc",
+          "on-surface-variant": "#4a4c4c"
+        },
+        fontFamily: {
+          "headline": ["JetBrains Mono"],
+          "body": ["JetBrains Mono"],
+          "mono": ["JetBrains Mono"]
+        },
+        borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+      },
+    },
+  }
+</script>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/20 min-h-screen flex flex-col">
+<div id="glow-dots"></div>
+<div id="glow-overlay"></div>
+
+<!-- Centered content -->
+<main class="flex-1 flex items-center justify-center relative z-10 px-6">
+  <div class="max-w-xl w-full">
+
+    <!-- Terminal block -->
+    <div class="font-mono space-y-4">
+
+      <!-- Big 404 -->
+      <div class="text-8xl md:text-9xl font-bold tracking-tighter text-on-surface/10 leading-none select-none">
+        404
+      </div>
+
+      <!-- Terminal prompt lines -->
+      <div class="space-y-2">
+        <p class="text-xl md:text-2xl">
+          <span class="text-primary">//</span> page not found<span class="cursor-blink">_</span>
+        </p>
+        <p class="text-sm text-on-surface-variant leading-relaxed" id="error-message"></p>
+      </div>
+
+      <!-- Navigation links -->
+      <div class="flex flex-wrap gap-3 pt-4">
+        <a href="/" class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-sm font-mono text-sm text-on-surface hover:border-l-[3px] hover:border-l-secondary-accent hover:text-secondary-accent transition-all">
+          home
+        </a>
+        <a href="/#services" class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-sm font-mono text-sm text-on-surface hover:border-l-[3px] hover:border-l-secondary-accent hover:text-secondary-accent transition-all">
+          services
+        </a>
+        <a href="/#about" class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-sm font-mono text-sm text-on-surface hover:border-l-[3px] hover:border-l-secondary-accent hover:text-secondary-accent transition-all">
+          about
+        </a>
+        <a href="/#contact" class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-sm font-mono text-sm text-on-surface hover:border-l-[3px] hover:border-l-secondary-accent hover:text-secondary-accent transition-all">
+          contact
+        </a>
+      </div>
+
+      <!-- Subtle path echo -->
+      <p class="text-xs text-outline-variant pt-6 font-mono">
+        <span class="text-primary/40">$</span> GET <span id="path-echo"></span> → <span class="text-secondary-accent/60">404</span>
+      </p>
+
+    </div>
+  </div>
+</main>
+
+<!-- Glow effect -->
+<script>
+(function() {
+  const overlay = document.getElementById('glow-overlay');
+  const dots = document.getElementById('glow-dots');
+  if (!overlay || !dots) return;
+  document.addEventListener('mousemove', (e) => {
+    const x = e.clientX + 'px';
+    const y = e.clientY + 'px';
+    overlay.style.setProperty('--mouse-x', x);
+    overlay.style.setProperty('--mouse-y', y);
+    overlay.style.setProperty('--glow-opacity', '1');
+    dots.style.setProperty('--mouse-x', x);
+    dots.style.setProperty('--mouse-y', y);
+    dots.style.setProperty('--glow-opacity', '1');
+  });
+  document.addEventListener('mouseleave', () => {
+    overlay.style.setProperty('--glow-opacity', '0');
+    dots.style.setProperty('--glow-opacity', '0');
+  });
+})();
+</script>
+
+<!-- Dynamic content -->
+<script>
+(function() {
+  // Show the attempted path
+  const pathEl = document.getElementById('path-echo');
+  pathEl.textContent = window.location.pathname;
+
+  // Typewriter for error message
+  const messages = [
+    "the route you requested doesn't exist. maybe it was moved, maybe it never was.",
+    "nothing here. the void stares back.",
+    "this page has been lost to the digital ether.",
+    "you've reached the edge of the map. here be nothing.",
+    "this address is unoccupied. the bits have moved on.",
+  ];
+  const msg = messages[Math.floor(Math.random() * messages.length)];
+  const msgEl = document.getElementById('error-message');
+  let i = 0;
+  function type() {
+    if (i <= msg.length) {
+      msgEl.textContent = msg.slice(0, i);
+      i++;
+      setTimeout(type, 25);
+    }
+  }
+  setTimeout(type, 400);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<meta http-equiv="X-Frame-Options" content="DENY"/>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
+<link rel="stylesheet" href="/assets/styles.css"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+        background-color: #fcfbf7;
+        background-image: radial-gradient(circle, #d1d1cc 1px, transparent 1px);
+        background-size: 24px 24px;
+    }
+    #glow-overlay {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        background: radial-gradient(
+            circle 160px at var(--mouse-x, -200px) var(--mouse-y, -200px),
+            rgba(101, 88, 181, 0.25) 0%,
+            transparent 100%
+        );
+        opacity: var(--glow-opacity, 0);
+        transition: opacity 0.3s ease;
+    }
+    #glow-dots {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 2;
+        background-image: radial-gradient(circle, #6558b5 1.5px, transparent 1.5px);
+        background-size: 24px 24px;
+        mask-image: radial-gradient(
+            circle 120px at var(--mouse-x, -200px) var(--mouse-y, -200px),
+            black 0%,
+            transparent 100%
+        );
+        -webkit-mask-image: radial-gradient(
+            circle 120px at var(--mouse-x, -200px) var(--mouse-y, -200px),
+            black 0%,
+            transparent 100%
+        );
+        opacity: var(--glow-opacity, 0);
+        transition: opacity 0.3s ease;
+    }
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+    #nav-cursor, .section-cursor {
+        animation: blink 1s step-end infinite;
+    }
+    #nav-logo {
+        cursor: default;
+        white-space: nowrap;
+    }
+</style>

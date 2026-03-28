@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="de" data-title-en="privacy policy" data-title-de="datenschutz">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>datenschutz – terminal velocity_</title>
+<meta name="description" content="Datenschutzerklärung – Informationen zur Verarbeitung personenbezogener Daten."/>
+<meta property="og:title" content="datenschutz – terminal velocity_"/>
+<meta property="og:description" content="Datenschutzerklärung – Informationen zur Verarbeitung personenbezogener Daten."/>
+<meta property="og:url" content="https://terminalvelocity.me/privacy/"/>
+<meta property="og:image" content="https://terminalvelocity.me/assets/og-card.png"/>
+<meta property="og:locale" content="de_DE"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<meta http-equiv="X-Frame-Options" content="DENY"/>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
+<link rel="stylesheet" href="/assets/styles.css"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+        background-color: #fcfbf7;
+        background-image: radial-gradient(circle, #d1d1cc 1px, transparent 1px);
+        background-size: 24px 24px;
+    }
+    #glow-overlay {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        background: radial-gradient(
+            circle 160px at var(--mouse-x, -200px) var(--mouse-y, -200px),
+            rgba(101, 88, 181, 0.25) 0%,
+            transparent 100%
+        );
+        opacity: var(--glow-opacity, 0);
+        transition: opacity 0.3s ease;
+    }
+    #glow-dots {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 2;
+        background-image: radial-gradient(circle, #6558b5 1.5px, transparent 1.5px);
+        background-size: 24px 24px;
+        mask-image: radial-gradient(
+            circle 120px at var(--mouse-x, -200px) var(--mouse-y, -200px),
+            black 0%,
+            transparent 100%
+        );
+        -webkit-mask-image: radial-gradient(
+            circle 120px at var(--mouse-x, -200px) var(--mouse-y, -200px),
+            black 0%,
+            transparent 100%
+        );
+        opacity: var(--glow-opacity, 0);
+        transition: opacity 0.3s ease;
+    }
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+    #nav-cursor, .section-cursor {
+        animation: blink 1s step-end infinite;
+    }
+    #nav-logo {
+        cursor: default;
+        white-space: nowrap;
+    }
+</style>
+
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/20">
+<div id="glow-dots"></div>
+<div id="glow-overlay"></div>
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface-dim/[0.88] backdrop-blur-md border-b border-black/5">
+<div class="flex justify-between items-center px-4 md:px-8 py-4 max-w-7xl mx-auto">
+<a href="/" class="text-xl font-mono text-on-surface lowercase no-underline" id="nav-logo"><span class="text-primary">//</span> <span id="nav-logo-text">ml</span><span id="nav-cursor" class="inline-block">_</span></a>
+<!-- Desktop nav -->
+<div class="hidden lg:flex items-center space-x-8">
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:opacity-100 hover:text-secondary-accent transition-opacity" href="/">home</a>
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:opacity-100 hover:text-secondary-accent transition-opacity" href="/#services">services</a>
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:opacity-100 hover:text-secondary-accent transition-opacity" href="/#about"><span class="lang-en">about</span><span class="lang-de hidden">&uuml;ber mich</span></a>
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:opacity-100 hover:text-secondary-accent transition-opacity" href="/#contact"><span class="lang-en">contact</span><span class="lang-de hidden">kontakt</span></a>
+<!-- Language toggle -->
+<div class="flex items-center font-mono text-base">
+<button onclick="setLang('de')" id="lang-btn-de" class="px-2 py-1 text-on-surface-variant opacity-50 transition-colors">de</button>
+<span class="text-outline-variant">|</span>
+<button onclick="setLang('en')" id="lang-btn-en" class="px-2 py-1 text-on-surface font-bold transition-colors">en</button>
+</div>
+<a href="/" class="bg-primary text-white px-5 py-2.5 text-base font-mono lowercase rounded-sm hover:brightness-110 active:scale-95 transition-all shadow-sm"><span class="lang-en">back to site</span><span class="lang-de hidden">zur&uuml;ck zur seite</span></a>
+</div>
+<!-- Mobile hamburger -->
+<button id="menu-toggle" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5" aria-label="Toggle menu">
+<span class="block w-6 h-0.5 bg-on-surface transition-all" id="bar1"></span>
+<span class="block w-6 h-0.5 bg-on-surface transition-all" id="bar2"></span>
+<span class="block w-6 h-0.5 bg-on-surface transition-all" id="bar3"></span>
+</button>
+</div>
+<!-- Mobile menu panel -->
+<div id="mobile-menu" class="hidden lg:hidden flex-col items-start px-4 md:px-8 pb-6 pt-2 space-y-4 bg-surface-dim/[0.92] backdrop-blur-md border-t border-black/5">
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:text-secondary-accent transition-opacity" href="/" onclick="closeMobileMenu()">home</a>
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:text-secondary-accent transition-opacity" href="/#services" onclick="closeMobileMenu()">services</a>
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:text-secondary-accent transition-opacity" href="/#about" onclick="closeMobileMenu()"><span class="lang-en">about</span><span class="lang-de hidden">&uuml;ber mich</span></a>
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:text-secondary-accent transition-opacity" href="/#contact" onclick="closeMobileMenu()"><span class="lang-en">contact</span><span class="lang-de hidden">kontakt</span></a>
+<!-- Language toggle (mobile) -->
+<div class="flex items-center font-mono text-base">
+<button onclick="setLang('de')" class="lang-btn-de px-2 py-1 text-on-surface-variant opacity-50 transition-colors">de</button>
+<span class="text-outline-variant">|</span>
+<button onclick="setLang('en')" class="lang-btn-en px-2 py-1 text-on-surface font-bold transition-colors">en</button>
+</div>
+<a href="/" class="bg-primary text-white px-5 py-2.5 text-base font-mono lowercase rounded-sm hover:brightness-110 active:scale-95 transition-all shadow-sm w-full text-center" onclick="closeMobileMenu()"><span class="lang-en">back to site</span><span class="lang-de hidden">zur&uuml;ck zur seite</span></a>
+</div>
+</nav>
+
+<!-- Nav logo typewriter -->
+<script>
+(function() {
+  const short = 'ml';
+  const full = 'matthias leyendecker';
+  const textEl = document.getElementById('nav-logo-text');
+  const logoEl = document.getElementById('nav-logo');
+  let typing = false;
+  let timeout = null;
+
+  function typeOut(from, to, callback) {
+    if (typing) return;
+    typing = true;
+    let i = from.length;
+    function step() {
+      if (i <= to.length) {
+        textEl.textContent = to.slice(0, i);
+        i++;
+        timeout = setTimeout(step, 60);
+      } else {
+        typing = false;
+        if (callback) callback();
+      }
+    }
+    step();
+  }
+
+  function eraseBack(from, to, callback) {
+    if (typing) return;
+    typing = true;
+    let i = from.length;
+    function step() {
+      if (i >= to.length) {
+        textEl.textContent = from.slice(0, i);
+        i--;
+        timeout = setTimeout(step, 30);
+      } else {
+        typing = false;
+        if (callback) callback();
+      }
+    }
+    step();
+  }
+
+  const phrases = [full, 'terminal velocity'];
+  let phraseIndex = 0;
+  let cycling = false;
+  let paused = false;
+
+  function cycle() {
+    if (paused) return;
+    cycling = true;
+    const target = phrases[phraseIndex];
+    typeOut(textEl.textContent, target, () => {
+      timeout = setTimeout(() => {
+        if (paused) return;
+        eraseBack(textEl.textContent, short, () => {
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          cycling = false;
+          timeout = setTimeout(cycle, 1500);
+        });
+      }, 2500);
+    });
+  }
+
+  // Start cycling after initial pause
+  timeout = setTimeout(cycle, 3000);
+
+  // Pause cycling on hover, resume on leave
+  logoEl.addEventListener('mouseenter', () => {
+    paused = true;
+    clearTimeout(timeout);
+    typing = false;
+    typeOut(textEl.textContent, full, () => {});
+  });
+
+  logoEl.addEventListener('mouseleave', () => {
+    paused = false;
+    clearTimeout(timeout);
+    typing = false;
+    eraseBack(textEl.textContent, short, () => {
+      phraseIndex = 0;
+      timeout = setTimeout(cycle, 2000);
+    });
+  });
+})();
+</script>
+
+<!-- Mobile menu JS -->
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const bar1 = document.getElementById('bar1');
+const bar2 = document.getElementById('bar2');
+const bar3 = document.getElementById('bar3');
+let menuOpen = false;
+function closeMobileMenu() {
+  menuOpen = false;
+  mobileMenu.classList.add('hidden');
+  mobileMenu.classList.remove('flex');
+  bar1.style.transform = '';
+  bar2.style.opacity = '';
+  bar3.style.transform = '';
+}
+menuToggle.addEventListener('click', () => {
+  menuOpen = !menuOpen;
+  if (menuOpen) {
+    mobileMenu.classList.remove('hidden');
+    mobileMenu.classList.add('flex');
+    bar1.style.transform = 'translateY(8px) rotate(45deg)';
+    bar2.style.opacity = '0';
+    bar3.style.transform = 'translateY(-8px) rotate(-45deg)';
+  } else {
+    closeMobileMenu();
+  }
+});
+</script>
+
+<!-- Main Content -->
+<main class="max-w-7xl mx-auto px-4 md:px-8 pt-32 pb-32">
+  <div class="bg-surface-dim/[0.92] backdrop-blur-sm rounded-sm shadow-sm border border-outline-variant/10 p-8 md:p-12 relative z-10">
+
+    <!-- Heading -->
+    <h1 class="font-mono text-2xl mb-6">
+      <span class="text-primary">//</span> <span id="page-title">datenschutz</span><span class="section-cursor">_</span>
+    </h1>
+
+    <!-- German content -->
+    <div id="content-de">
+      <p class="font-body text-sm text-on-surface-variant mb-8">Informationen zur Verarbeitung personenbezogener Daten gem&auml;&szlig; DSGVO</p>
+
+      <div class="space-y-8">
+        <div>
+          <h2 class="font-mono text-lg font-bold mb-3">Verantwortlicher</h2>
+          <div class="font-body text-sm text-on-surface-variant leading-relaxed space-y-1">
+            <p class="text-on-surface font-medium">Matthias Leyendecker</p>
+            <p>Leopoldstr. 8</p>
+            <p>76131 Karlsruhe</p>
+            <p>Deutschland</p>
+            <p>E-Mail: <a href="mailto:mlyndckr@gmail.com" class="text-primary hover:text-secondary-accent transition-colors">mlyndckr@gmail.com</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-mono text-lg font-bold mb-3">Hosting</h2>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed">
+            Diese Website wird &uuml;ber GitHub Pages gehostet. Anbieter ist die GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. Beim Besuch dieser Website werden vom Hosting-Anbieter automatisch Informationen in sogenannten Server-Log-Dateien gespeichert, die Ihr Browser automatisch &uuml;bermittelt. Dies sind: Browsertyp und -version, verwendetes Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners und Uhrzeit der Serveranfrage. Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenf&uuml;hrung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-mono text-lg font-bold mb-3">Externe Dienste</h2>
+          <div class="font-body text-sm text-on-surface-variant leading-relaxed space-y-4">
+            <p><strong>Google Fonts:</strong> Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten sogenannte Google Fonts, bereitgestellt von Google LLC. Beim Aufruf einer Seite l&auml;dt Ihr Browser die ben&ouml;tigten Fonts in Ihren Browsercache. Dabei wird Ihre IP-Adresse an Server von Google &uuml;bermittelt. Weitere Informationen finden Sie in der <a href="https://developers.google.com/fonts/faq" class="text-primary hover:text-secondary-accent transition-colors" target="_blank" rel="noopener noreferrer">Google Fonts FAQ</a> und der <a href="https://policies.google.com/privacy" class="text-primary hover:text-secondary-accent transition-colors" target="_blank" rel="noopener noreferrer">Datenschutzerkl&auml;rung von Google</a>.</p>
+            <p><strong>Tailwind CSS CDN:</strong> Zur Gestaltung der Website wird Tailwind CSS &uuml;ber ein CDN geladen. Dabei kann eine Verbindung zu einem CDN-Server hergestellt werden, wobei Ihre IP-Adresse &uuml;bermittelt wird.</p>
+            <p><strong>FormSubmit:</strong> F&uuml;r das Kontaktformular wird der Dienst FormSubmit verwendet. Bei Absenden einer Nachricht werden Ihre eingegebenen Daten (Name, E-Mail, Nachricht) an FormSubmit &uuml;bermittelt und per E-Mail weitergeleitet. FormSubmit speichert keine Daten dauerhaft.</p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-mono text-lg font-bold mb-3">Cookies &amp; localStorage</h2>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed">
+            Diese Website verwendet keine Cookies. Es wird ausschlie&szlig;lich <code class="bg-surface-container px-1.5 py-0.5 rounded-sm text-xs">localStorage</code> genutzt, um Ihre Sprachpr&auml;ferenz (Deutsch/Englisch) zu speichern. Diese Information verl&auml;sst Ihren Browser nicht und wird nicht an Server &uuml;bermittelt.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-mono text-lg font-bold mb-3">Ihre Rechte</h2>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed">
+            Sie haben gem&auml;&szlig; DSGVO das Recht auf Auskunft, Berichtigung, L&ouml;schung, Einschr&auml;nkung der Verarbeitung, Daten&uuml;bertragbarkeit und Widerspruch. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verst&ouml;&szlig;t, k&ouml;nnen Sie sich bei einer Aufsichtsbeh&ouml;rde beschweren. Zust&auml;ndige Aufsichtsbeh&ouml;rde: <a href="https://www.baden-wuerttemberg.datenschutz.de/" class="text-primary hover:text-secondary-accent transition-colors" target="_blank" rel="noopener noreferrer">Landesbeauftragter f&uuml;r den Datenschutz Baden-W&uuml;rttemberg</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- English content -->
+    <div id="content-en" class="hidden">
+      <p class="font-body text-sm text-on-surface-variant mb-8">Information on the processing of personal data in accordance with GDPR</p>
+
+      <div class="space-y-8">
+        <div>
+          <h2 class="font-mono text-lg font-bold mb-3">Data controller</h2>
+          <div class="font-body text-sm text-on-surface-variant leading-relaxed space-y-1">
+            <p class="text-on-surface font-medium">Matthias Leyendecker</p>
+            <p>Leopoldstr. 8</p>
+            <p>76131 Karlsruhe</p>
+            <p>Germany</p>
+            <p>Email: <a href="mailto:mlyndckr@gmail.com" class="text-primary hover:text-secondary-accent transition-colors">mlyndckr@gmail.com</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-mono text-lg font-bold mb-3">Hosting</h2>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed">
+            This website is hosted via GitHub Pages. The provider is GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. When visiting this website, the hosting provider automatically stores information in server log files that your browser transmits automatically. This includes: browser type and version, operating system, referrer URL, hostname of the accessing computer, and time of the server request. This data cannot be attributed to specific individuals. This data is not merged with other data sources.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-mono text-lg font-bold mb-3">External services</h2>
+          <div class="font-body text-sm text-on-surface-variant leading-relaxed space-y-4">
+            <p><strong>Google Fonts:</strong> This site uses Google Fonts for consistent typography, provided by Google LLC. When you visit a page, your browser loads the required fonts into its cache. Your IP address is transmitted to Google servers. More information can be found in the <a href="https://developers.google.com/fonts/faq" class="text-primary hover:text-secondary-accent transition-colors" target="_blank" rel="noopener noreferrer">Google Fonts FAQ</a> and <a href="https://policies.google.com/privacy" class="text-primary hover:text-secondary-accent transition-colors" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+            <p><strong>Tailwind CSS CDN:</strong> The website uses Tailwind CSS loaded via CDN. This may establish a connection to a CDN server, transmitting your IP address.</p>
+            <p><strong>FormSubmit:</strong> The contact form uses FormSubmit. When submitting a message, the data you enter (name, email, message) is transmitted to FormSubmit and forwarded via email. FormSubmit does not permanently store any data.</p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-mono text-lg font-bold mb-3">Cookies &amp; localStorage</h2>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed">
+            This website does not use cookies. Only <code class="bg-surface-container px-1.5 py-0.5 rounded-sm text-xs">localStorage</code> is used to save your language preference (German/English). This information does not leave your browser and is not transmitted to any server.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-mono text-lg font-bold mb-3">Your rights</h2>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed">
+            Under GDPR, you have the right to access, rectification, erasure, restriction of processing, data portability, and objection. If you believe that the processing of your data violates data protection law, you may file a complaint with a supervisory authority. Competent authority: <a href="https://www.baden-wuerttemberg.datenschutz.de/" class="text-primary hover:text-secondary-accent transition-colors" target="_blank" rel="noopener noreferrer">State Commissioner for Data Protection of Baden-W&uuml;rttemberg</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container/[0.92] w-full py-8 mt-20 border-t border-outline-variant/20 relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-center px-4 md:px-8 max-w-7xl mx-auto gap-4">
+<div class="font-mono text-sm text-on-surface">&copy; 2026 Matthias Leyendecker. All rights reserved.</div>
+<div class="flex gap-1 items-center">
+<!-- Email -->
+<a href="mailto:mlyndckr@gmail.com" class="text-primary hover:text-secondary-accent transition-colors p-2 min-w-[44px] min-h-[44px] flex items-center justify-center" title="Email">
+<svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+</a>
+<!-- Blog -->
+<a href="/blog" class="text-primary hover:text-secondary-accent transition-colors p-2 min-w-[44px] min-h-[44px] flex items-center justify-center" title="Blog">
+<svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1.003 1.003 0 000-1.42l-2.34-2.34a1.003 1.003 0 00-1.42 0l-1.83 1.83 3.75 3.75 1.84-1.82z"/></svg>
+</a>
+<!-- GitHub -->
+<a href="https://github.com/matoautomato" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary-accent transition-colors p-2 min-w-[44px] min-h-[44px] flex items-center justify-center" title="GitHub">
+<svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+</a>
+<!-- CV -->
+<a href="/cv" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary-accent transition-colors p-2 min-w-[44px] min-h-[44px] flex items-center justify-center" title="CV / R&eacute;sum&eacute;">
+<svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-2 .89-2 2v11c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+</a>
+<!-- Hacker Glider -->
+<a href="https://en.wikipedia.org/wiki/Hacker_culture" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary-accent transition-colors p-2 min-w-[44px] min-h-[44px] flex items-center justify-center" title="Hacker Culture">
+<svg class="w-6 h-6" viewBox="-0.5 -0.5 4 4" fill="currentColor"><circle cx="1" cy="0" r="0.38"/><circle cx="2" cy="1" r="0.38"/><circle cx="0" cy="2" r="0.38"/><circle cx="1" cy="2" r="0.38"/><circle cx="2" cy="2" r="0.38"/></svg>
+</a>
+<!-- Open Source -->
+<a href="https://en.wikipedia.org/wiki/Open_source" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary-accent transition-colors p-2 min-w-[44px] min-h-[44px] flex items-center justify-center" title="Open Source">
+<svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 4.127 2.088 7.77 5.265 9.924l2.458-5.861A3.996 3.996 0 018 12c0-2.21 1.79-4 4-4s4 1.79 4 4a3.996 3.996 0 01-.277 3.937l2.458 5.861C21.912 19.77 24 16.127 24 12c0-6.627-5.373-12-12-12z"/></svg>
+</a>
+<!-- RSS -->
+<a href="/feed/index.xml" class="text-primary hover:text-secondary-accent transition-colors p-2 min-w-[44px] min-h-[44px] flex items-center justify-center" title="RSS Feed">
+<svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795 0 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.742-7.115-15.793-15.839-15.82zm0-8.18v4.819c12.484.076 22.597 10.187 22.658 22.661h4.842c-.076-15.163-12.346-27.432-27.5-27.48z"/></svg>
+</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-4 md:px-8 mt-4 flex gap-2 items-center">
+<a class="font-mono text-sm text-outline-variant hover:text-secondary-accent transition-all" href="/privacy"><span class="lang-en">Privacy Policy</span><span class="lang-de hidden">Datenschutzerkl&auml;rung</span></a>
+<span class="font-mono text-sm text-outline-variant">&middot;</span>
+<a class="font-mono text-sm text-outline-variant hover:text-secondary-accent transition-all" href="/imprint"><span class="lang-en">Imprint</span><span class="lang-de hidden">Impressum</span></a>
+<span class="font-mono text-sm text-outline-variant">&middot;</span>
+<a class="font-mono text-sm text-outline-variant hover:text-secondary-accent transition-all" href="https://sandragoettisheim.de/" target="_blank" rel="noopener noreferrer">Photo by Sandra G&ouml;ttisheim</a>
+</div>
+</footer>
+<!-- Glow effect -->
+<script>
+(function() {
+  const overlay = document.getElementById('glow-overlay');
+  const dots = document.getElementById('glow-dots');
+  if (!overlay || !dots) return;
+
+  document.addEventListener('mousemove', (e) => {
+    const x = e.clientX + 'px';
+    const y = e.clientY + 'px';
+    overlay.style.setProperty('--mouse-x', x);
+    overlay.style.setProperty('--mouse-y', y);
+    overlay.style.setProperty('--glow-opacity', '1');
+    dots.style.setProperty('--mouse-x', x);
+    dots.style.setProperty('--mouse-y', y);
+    dots.style.setProperty('--glow-opacity', '1');
+  });
+
+  document.addEventListener('mouseleave', () => {
+    overlay.style.setProperty('--glow-opacity', '0');
+    dots.style.setProperty('--glow-opacity', '0');
+  });
+})();
+</script>
+
+<!-- Language toggle -->
+<script>
+function setLang(lang) {
+  // Update all toggle buttons (desktop + mobile)
+  document.querySelectorAll('#lang-btn-de, .lang-btn-de').forEach(btn => {
+    btn.classList.toggle('font-bold', lang === 'de');
+    btn.classList.toggle('text-on-surface', lang === 'de');
+    btn.classList.toggle('opacity-50', lang !== 'de');
+    btn.classList.toggle('text-on-surface-variant', lang !== 'de');
+  });
+  document.querySelectorAll('#lang-btn-en, .lang-btn-en').forEach(btn => {
+    btn.classList.toggle('font-bold', lang === 'en');
+    btn.classList.toggle('text-on-surface', lang === 'en');
+    btn.classList.toggle('opacity-50', lang !== 'en');
+    btn.classList.toggle('text-on-surface-variant', lang !== 'en');
+  });
+
+  // Swap .lang-en / .lang-de elements
+  document.querySelectorAll('.lang-en').forEach(el => {
+    el.classList.toggle('hidden', lang !== 'en');
+    if (el.tagName === 'SELECT' || el.tagName === 'INPUT') {
+      el.disabled = lang !== 'en';
+    }
+  });
+  document.querySelectorAll('.lang-de').forEach(el => {
+    el.classList.toggle('hidden', lang !== 'de');
+    if (el.tagName === 'SELECT' || el.tagName === 'INPUT') {
+      el.disabled = lang !== 'de';
+    }
+  });
+
+  // Toggle content-de / content-en blocks (privacy, imprint)
+  const contentDe = document.getElementById('content-de');
+  const contentEn = document.getElementById('content-en');
+  if (contentDe && contentEn) {
+    contentDe.classList.toggle('hidden', lang === 'en');
+    contentEn.classList.toggle('hidden', lang !== 'en');
+  }
+
+  // Update page title via data attributes (privacy, imprint)
+  const titleEl = document.getElementById('page-title');
+  if (titleEl) {
+    const html = document.documentElement;
+    const titleEn = html.dataset.titleEn;
+    const titleDe = html.dataset.titleDe;
+    if (titleEn && titleDe) {
+      titleEl.textContent = lang === 'en' ? titleEn : titleDe;
+    }
+  }
+
+  // Update form placeholders
+  document.querySelectorAll('[data-placeholder-en]').forEach(el => {
+    el.placeholder = lang === 'de' ? el.dataset.placeholderDe : el.dataset.placeholderEn;
+  });
+
+  // Update section typewriters (index page)
+  document.querySelectorAll('.section-typewriter').forEach(el => {
+    const fullText = lang === 'de' ? (el.dataset.fullDe || el.dataset.full) : el.dataset.full;
+    if (el.textContent === el.dataset.full || el.textContent === el.dataset.fullDe || el.textContent.length <= 1) {
+      el.textContent = fullText.charAt(0);
+      el.dataset.currentFull = fullText;
+      delete el.dataset.typed;
+    }
+  });
+
+  // Update html lang attribute
+  document.documentElement.lang = lang;
+
+  localStorage.setItem('lang', lang);
+}
+
+// Restore saved preference
+(function() {
+  const saved = localStorage.getItem('lang');
+  if (saved) setLang(saved);
+})();
+</script>
+</body></html>

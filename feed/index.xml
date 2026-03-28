@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>terminal velocity_</title>
+    <link>https://terminalvelocity.me/blog/</link>
+    <description>Hot takes on product, AI and fintech. Occasionally correct.</description>
+    <language>en</language>
+    <atom:link href="https://terminalvelocity.me/feed/index.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>From scribe to architect: what happens after coding is solved?</title>
+      <link>https://terminalvelocity.me/blog/scribe-to-architect/</link>
+      <guid isPermaLink="true">https://terminalvelocity.me/blog/scribe-to-architect/</guid>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+      <description>In the last post, I made the hot take that coding – the syntax, the skill of learning a programming language – is quickly becoming a commodity. The question is not which language to learn, but whether you can be precise enough to tell your machine what you want. That was act one: the arrival of the agents. Onwards to act two: what remains.</description>
+      <content:encoded><![CDATA[<p class="mb-4">In the <a href="https://terminalvelocity.me/blog/ai-code-commodity/" class="text-primary hover:text-secondary-accent transition-colors underline">last post</a>, I made the hot take that coding &ndash; the syntax, the skill of learning a programming language &ndash; is quickly becoming a commodity. The question is not which language to learn, but whether you can be precise enough to tell your machine what you want. That was act one: the arrival of the agents. Onwards to act two: what remains.</p>
+
+    <p class="mb-4">In a recent podcast appearance, <a href="https://www.youtube.com/watch?v=julbw1JuAz0" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary-accent transition-colors underline">Boris Cherny</a> compared the craft of software engineering to that of the &ldquo;medieval scribes.&rdquo; That tiny, hyper-literate elite. Scribes were often more educated than the kings and lords they served, not just copying books in a painstakingly slow process, but being quite literally the interface to written knowledge for masters who weren&rsquo;t literate themselves.</p>
+
+    <h2 class="font-headline text-lg font-bold mt-8 mb-4 text-on-surface">Then came the printing press</h2>
+
+    <p class="mb-4">The printing press didn&rsquo;t destroy scribes overnight. It just made their core skill &ndash; slow, perfected, manual reproduction of text &ndash; irrelevant. To go back to Boris&rsquo;s podcast appearance: the notion that scribes became the first authors is not historically provable, and is probably more of a romantic thought than a documented fact. The truth is that literacy skills survived, expanded rapidly, and found new vessels &ndash; early printers, editors, translators, scholars. The craft of producing written text and knowledge did not disappear, but the bottleneck for its proliferation disappeared.</p>
+
+    <h2 class="font-headline text-lg font-bold mt-8 mb-4 text-on-surface">The parallels to software engineering today</h2>
+
+    <p class="mb-4">It is the running in-joke at many a tech company that the nerds writing software are a small priesthood, gatekeeping access to the mystical ways of the machine. If you don&rsquo;t speak it &ndash; or aren&rsquo;t code-literate &ndash; you can&rsquo;t join the club. I have lively memories of my first encounter, as a very green PM way too many years ago, with an extremely seasoned architect, who folded me like a camping chair for suggesting a technical solution in a sprint planning. Good times.</p>
+
+    <figure class="my-6">
+      <img src="https://terminalvelocity.me/assets/gettyimages-scribe.jpg" alt="Medieval scribe at work" class="w-full max-w-lg rounded-sm"/>
+      <figcaption class="font-mono text-xs text-on-surface-variant/60 mt-2 italic">CEO pitching new product idea to his Engineering Lead</figcaption>
+    </figure>
+
+    <p class="mb-4">AI advancements and the current wave of agents are comparable to the printing press. The &ldquo;tech-illiterates&rdquo; &ndash; CEOs, some PMs, designers &ndash; the kings who could not read &ndash; are now starting to build things themselves, using code syntax they don&rsquo;t even understand.</p>
+
+    <p class="mb-4">And it&rsquo;s not just non-techies shipping entire features without touching code. Even seasoned developers with a deep portfolio of programming languages under their belt are, by adopting AI into their workflow, writing less and less code themselves. Boris notes in the podcast that 100% of his code has been written by AI since November 2025. Andrej Karpathy <a href="https://www.youtube.com/watch?v=kwSVtQ7dziU" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary-accent transition-colors underline">stated in a recent podcast</a> that by December he had already flipped to writing just 20% of his own code &ndash; and hasn&rsquo;t typed a line since.</p>
+
+    <p class="mb-4">Now, those two are extreme examples &ndash; and Boris, for one, presumably has unlimited access to tokens.</p>
+
+    <p class="mb-4">There is a version of this essay where I spend three paragraphs on token economics, the true cost of compute, and whether we are all just characters in a fever dream fuelled by absurd amounts of investment capital. That essay exists. You are not reading it.</p>
+
+    <h2 class="font-headline text-lg font-bold mt-8 mb-4 text-on-surface">What remains</h2>
+
+    <p class="mb-4">The <em>engineering</em> part is not going away &ndash; and it was never the same thing as coding anyway. The job being replaced is &ldquo;human-as-syntax-translator.&rdquo; The job that remains &ndash; and was always the aspirational one, by the way &ndash; is &ldquo;human-as-system-thinker.&rdquo;</p>
+
+    <p class="mb-4">This is an important distinction for juniors hitting the job market right now. I recently had a conversation about this with a CTO and founder in the European fintech space, and his framing nailed it: the entry-level job of the future will essentially be something like a &ldquo;junior architect&rdquo; or &ldquo;systems orchestrator.&rdquo;</p>
+
+    <p class="mb-4">All the underlying engineering muscles become <em>more</em> valuable, not less. System design, trade-off analysis, understanding failure modes, knowing <em>why</em> something should be built a certain way. Especially when you are orchestrating five agents simultaneously to go and build separate but ultimately interconnected things.</p>
+
+    <p class="mb-4">Ironically, this is what senior engineers were always best at. AI has just removed the prerequisite of absolute syntax fluency &ndash; and the scribe bottleneck along with it.</p>
+
+    <h2 class="font-headline text-lg font-bold mt-8 mb-4 text-on-surface">An uncomfortable way forward</h2>
+
+    <p class="mb-4">I am really not trying to play the prophet here. This is just an attempt at a zoomed-out observation at a very specific point in time, which happens to be early 2026.</p>
+
+    <p class="mb-4">But as of right now, it&rsquo;s clear that the transition &ndash; for new engineers and experienced ones alike &ndash; won&rsquo;t be clean or comfortable. If your entire professional identity was built on coding at some insane craft level, that identity is under pressure. Speed was always everything, and the scribing bottleneck is gone.</p>
+
+    <p class="mb-4">And with the flood &ndash; where everyone, including those with little to no systems thinking, can spin up anything &ndash; judgement of quality becomes the scarcest resource. Just like an editor is the last line of defence against a bad author&rsquo;s output. The difference is that this author (agent) never sleeps, never gets offended by your (the editor&rsquo;s) feedback, and will cheerfully rewrite the entire chapter in thirty seconds.</p>
+
+    <p class="mb-4">Boris mentions in the podcast a 15th-century scribe who was asked how he felt about the printing press. The surprising answer was that he wasn&rsquo;t lamenting the printing press, he was excited. He had never enjoyed copying books over and over and over again &ndash; the parts he loved were illustration and bookbinding.</p>
+
+    <p class="mb-4">That is perhaps the mental framework to adopt going forward: code syntax becomes a common language, a generalist view on the products we create becomes key, and we get to focus on the bits that actually matter.</p>
+
+    <p class="mb-4"><em>That is, until you hit your usage limit.</em></p>]]></content:encoded>
+      <enclosure url="https://terminalvelocity.me/assets/og-card.png" type="image/png" length="0"/>
+    </item>
+    <item>
+      <title>“Coding” is becoming a commodity</title>
+      <link>https://terminalvelocity.me/blog/ai-code-commodity/</link>
+      <guid isPermaLink="true">https://terminalvelocity.me/blog/ai-code-commodity/</guid>
+      <pubDate>Tue, 03 Mar 2026 00:00:00 +0000</pubDate>
+      <description>“What programming language should I learn?” That famous question every “coding-curious” person has asked at least once.</description>
+      <content:encoded><![CDATA[<p class="mb-4">&ldquo;What programming language should I learn?&rdquo; That famous question every &ldquo;coding-curious&rdquo; person has asked at least once.</p>
+
+    <p class="mb-4">Just 2 years ago, the answer might be something like &ldquo;the programming language used is not relevant, you have to understand the underlying concepts of software engineering&rdquo; (you are probably talking to a software engineer) or &ldquo;you working with data? go with python!&rdquo; (you are probably talking to a data scientist).</p>
+
+    <p class="mb-4">The answer today is: English. Learn English. (or any language you already speak).</p>
+
+    <img src="https://terminalvelocity.me/assets/english-motherfucker.webp" alt="Pulp Fiction scene – English, motherfucker! Do you speak it?" class="w-full max-w-lg my-6 rounded-sm"/>
+
+    <p class="mb-4">&ldquo;Coding&rdquo; is rapidly becoming a commodity. When operating in an AI-powered VS code or directly in Claude Code, the limiting factor is just your ability to express as precisely as possible what you want in the natural language you speak. By &ldquo;speak&rdquo; I also mean dictate into your microphone. And then iterate on your steps. Your AI agents (plural) do the rest. December 2025 is the moment we can mark in our calendars when this shift truly happened.</p>
+
+    <p class="mb-4">This paradigm shift even justifies a paragraph on the <a href="https://en.wikipedia.org/wiki/Natural_language_programming#AI_in_natural_language_programming" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary-accent transition-colors underline">Natural Language Programming Wikipedia page</a>.</p>
+
+    <p class="mb-4">It&rsquo;s very similar to the way translation software works. We have reached an amazing level of precision in text-to-text translations &ndash; and we are completely used to it.</p>
+
+    <p class="mb-4">Take DeepL as an example. Being tri-lingual, I often try to test the output based on an input I know the meaning of, and time and time again I am amazed that the software even captures some subtle meaning that is far removed from simple line by line, word by word translations.</p>
+
+    <p class="mb-4">But still &ndash; it has become a commodity. We are so used to it and its quality output that we use it casually, hidden within browser extension, just one click away from understanding any foreign language.</p>
+
+    <p class="mb-4">LLMs have become so precise in translating your natural language input into the appropriate code syntax that learning a new (programming) language is a valiant effort, but not a necessary one. It has the same benefits as learning a new (natural) language &ndash; it makes you smarter, believe it or not &ndash; but beyond that you will be able to navigate the complicated world of coding pretty easily. Just as you would be able to navigate with Google Translate through your next holiday in Thailand.</p>
+
+    <p class="mb-4">The question today is not really about code. It&rsquo;s about whether you can think precisely enough to tell a machine what you want.</p>
+
+    <p class="mb-4">AI didn&rsquo;t just lower that bar &ndash; it blew open the door and removed the secondary skill of learning a programming language completely. And we are getting used to it faster than we realise.</p>
+
+    <p class="mb-4">And a small PS: note that I write explicitly about <em>coding</em>. I am not talking about the <em>engineering</em> side of software. That&rsquo;s for another time.</p>]]></content:encoded>
+      <enclosure url="https://terminalvelocity.me/assets/og-card.png" type="image/png" length="0"/>
+    </item>
+    <item>
+      <title>What is terminal velocity?</title>
+      <link>https://terminalvelocity.me/blog/what-is-terminal-velocity/</link>
+      <guid isPermaLink="true">https://terminalvelocity.me/blog/what-is-terminal-velocity/</guid>
+      <pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate>
+      <description>For software engineers, it&#x27;s the speed at which they spin up things on their local machine via the terminal. And I&#x27;d be lying if I said that joke isn&#x27;t hidden somewhere in the name of this blog. But I digress.</description>
+      <content:encoded><![CDATA[<p class="mb-4">For software engineers, it's the speed at which they spin up things on their local machine via the terminal. And I'd be lying if I said that joke isn't hidden somewhere in the name of this blog. But I digress.</p>
+
+    <p class="mb-4">For a physicist, terminal velocity is the maximum possible velocity of an object once its acceleration equals its drag. In this state, the object stops accelerating and continues at a constant speed.</p>
+
+    <p class="mb-4">Skydivers are probably more familiar than most with this concept. According to Wikipedia, the standard free-fall position (face down, belly to the ground) puts them at roughly 55 m/s.</p>
+
+    <p class="mb-4">And skydivers also know that reaching one's terminal velocity is just half the fun. The real kicker is to increase it and — since gravity remains the constant — that means reducing the drag: pull in your arms and legs, lean forward head-first.</p>
+
+    <p class="mb-4">Once you dive (pun intended) into that rabbit hole, you realise this is a remarkably hard physical feat. Speeds of up to 90 m/s are possible with enough experience. Which is incredibly fast, if that needs to be stressed again.</p>
+
+    <figure class="my-6">
+      <img src="https://terminalvelocity.me/assets/pexels-pixabay-70361_skydive.jpg" alt="Skydiver in free fall" class="w-full max-w-lg rounded-sm"/>
+    </figure>
+
+    <p class="mb-4">To bring the metaphor home: one of my core beliefs is that speed beats literally every other business metric when building software products. Speed to discover the right things to build, speed of execution, speed to market, speed to pivot when experiments go wrong. Good tech companies have already accelerated to terminal velocity. The best companies have found ways to pull in their limbs and decrease the drag to reach even higher speeds. Excellent leaders always find ways to decrease that drag as much as possible.</p>
+
+    <p class="mb-4">Reaching such a flow state with your organisation - where things mesh like clockwork, where roles and responsibilities start to blend and teams have a singular focus - is probably the most fun you can have working in tech.</p>
+
+    <p class="mb-4">This blog aims to be a collection of posts, essays, personal experiences and active learning on this and related topics. And since it needs to be stressed these days — it is written by <a href="https://terminalvelocity.me/#about" class="text-primary hover:text-secondary-accent underline">a human</a>. Hope to see you around.</p>
+
+    <p class="mb-4">Matthias</p>
+
+    <p class="mb-4"><em>(PS: This blog migrated away from my old Substack. Some of the early posts will be from my archive.)</em></p>]]></content:encoded>
+      <enclosure url="https://terminalvelocity.me/assets/og-card.png" type="image/png" length="0"/>
+    </item>
+  </channel>
+</rss>

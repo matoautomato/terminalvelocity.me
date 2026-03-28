@@ -1,0 +1,158 @@
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface-dim/[0.88] backdrop-blur-md border-b border-black/5">
+<div class="flex justify-between items-center px-4 md:px-8 py-4 max-w-7xl mx-auto">
+<a href="/" class="text-xl font-mono text-on-surface lowercase no-underline" id="nav-logo"><span class="text-primary">//</span> <span id="nav-logo-text">ml</span><span id="nav-cursor" class="inline-block">_</span></a>
+<!-- Desktop nav -->
+<div class="hidden lg:flex items-center space-x-8">
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:opacity-100 hover:text-secondary-accent transition-opacity" href="/">home</a>
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:opacity-100 hover:text-secondary-accent transition-opacity" href="/#services">services</a>
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:opacity-100 hover:text-secondary-accent transition-opacity" href="/#about"><span class="lang-en">about</span><span class="lang-de hidden">&uuml;ber mich</span></a>
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:opacity-100 hover:text-secondary-accent transition-opacity" href="/#contact"><span class="lang-en">contact</span><span class="lang-de hidden">kontakt</span></a>
+<!-- Language toggle -->
+<div class="flex items-center font-mono text-base">
+<button onclick="setLang('de')" id="lang-btn-de" class="px-2 py-1 text-on-surface-variant opacity-50 transition-colors">de</button>
+<span class="text-outline-variant">|</span>
+<button onclick="setLang('en')" id="lang-btn-en" class="px-2 py-1 text-on-surface font-bold transition-colors">en</button>
+</div>
+<!-- NAV_CTA_DESKTOP -->
+</div>
+<!-- Mobile hamburger -->
+<button id="menu-toggle" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5" aria-label="Toggle menu">
+<span class="block w-6 h-0.5 bg-on-surface transition-all" id="bar1"></span>
+<span class="block w-6 h-0.5 bg-on-surface transition-all" id="bar2"></span>
+<span class="block w-6 h-0.5 bg-on-surface transition-all" id="bar3"></span>
+</button>
+</div>
+<!-- Mobile menu panel -->
+<div id="mobile-menu" class="hidden lg:hidden flex-col items-start px-4 md:px-8 pb-6 pt-2 space-y-4 bg-surface-dim/[0.92] backdrop-blur-md border-t border-black/5">
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:text-secondary-accent transition-opacity" href="/" onclick="closeMobileMenu()">home</a>
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:text-secondary-accent transition-opacity" href="/#services" onclick="closeMobileMenu()">services</a>
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:text-secondary-accent transition-opacity" href="/#about" onclick="closeMobileMenu()"><span class="lang-en">about</span><span class="lang-de hidden">&uuml;ber mich</span></a>
+<a class="font-mono text-base lowercase tracking-tight text-on-surface opacity-70 hover:text-secondary-accent transition-opacity" href="/#contact" onclick="closeMobileMenu()"><span class="lang-en">contact</span><span class="lang-de hidden">kontakt</span></a>
+<!-- Language toggle (mobile) -->
+<div class="flex items-center font-mono text-base">
+<button onclick="setLang('de')" class="lang-btn-de px-2 py-1 text-on-surface-variant opacity-50 transition-colors">de</button>
+<span class="text-outline-variant">|</span>
+<button onclick="setLang('en')" class="lang-btn-en px-2 py-1 text-on-surface font-bold transition-colors">en</button>
+</div>
+<!-- NAV_CTA_MOBILE -->
+</div>
+</nav>
+
+<!-- Nav logo typewriter -->
+<script>
+(function() {
+  const short = 'ml';
+  const full = 'matthias leyendecker';
+  const textEl = document.getElementById('nav-logo-text');
+  const logoEl = document.getElementById('nav-logo');
+  let typing = false;
+  let timeout = null;
+
+  function typeOut(from, to, callback) {
+    if (typing) return;
+    typing = true;
+    let i = from.length;
+    function step() {
+      if (i <= to.length) {
+        textEl.textContent = to.slice(0, i);
+        i++;
+        timeout = setTimeout(step, 60);
+      } else {
+        typing = false;
+        if (callback) callback();
+      }
+    }
+    step();
+  }
+
+  function eraseBack(from, to, callback) {
+    if (typing) return;
+    typing = true;
+    let i = from.length;
+    function step() {
+      if (i >= to.length) {
+        textEl.textContent = from.slice(0, i);
+        i--;
+        timeout = setTimeout(step, 30);
+      } else {
+        typing = false;
+        if (callback) callback();
+      }
+    }
+    step();
+  }
+
+  const phrases = [full, 'terminal velocity'];
+  let phraseIndex = 0;
+  let cycling = false;
+  let paused = false;
+
+  function cycle() {
+    if (paused) return;
+    cycling = true;
+    const target = phrases[phraseIndex];
+    typeOut(textEl.textContent, target, () => {
+      timeout = setTimeout(() => {
+        if (paused) return;
+        eraseBack(textEl.textContent, short, () => {
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          cycling = false;
+          timeout = setTimeout(cycle, 1500);
+        });
+      }, 2500);
+    });
+  }
+
+  // Start cycling after initial pause
+  timeout = setTimeout(cycle, 3000);
+
+  // Pause cycling on hover, resume on leave
+  logoEl.addEventListener('mouseenter', () => {
+    paused = true;
+    clearTimeout(timeout);
+    typing = false;
+    typeOut(textEl.textContent, full, () => {});
+  });
+
+  logoEl.addEventListener('mouseleave', () => {
+    paused = false;
+    clearTimeout(timeout);
+    typing = false;
+    eraseBack(textEl.textContent, short, () => {
+      phraseIndex = 0;
+      timeout = setTimeout(cycle, 2000);
+    });
+  });
+})();
+</script>
+
+<!-- Mobile menu JS -->
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const bar1 = document.getElementById('bar1');
+const bar2 = document.getElementById('bar2');
+const bar3 = document.getElementById('bar3');
+let menuOpen = false;
+function closeMobileMenu() {
+  menuOpen = false;
+  mobileMenu.classList.add('hidden');
+  mobileMenu.classList.remove('flex');
+  bar1.style.transform = '';
+  bar2.style.opacity = '';
+  bar3.style.transform = '';
+}
+menuToggle.addEventListener('click', () => {
+  menuOpen = !menuOpen;
+  if (menuOpen) {
+    mobileMenu.classList.remove('hidden');
+    mobileMenu.classList.add('flex');
+    bar1.style.transform = 'translateY(8px) rotate(45deg)';
+    bar2.style.opacity = '0';
+    bar3.style.transform = 'translateY(-8px) rotate(-45deg)';
+  } else {
+    closeMobileMenu();
+  }
+});
+</script>

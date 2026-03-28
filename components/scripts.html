@@ -1,0 +1,102 @@
+<!-- Glow effect -->
+<script>
+(function() {
+  const overlay = document.getElementById('glow-overlay');
+  const dots = document.getElementById('glow-dots');
+  if (!overlay || !dots) return;
+
+  document.addEventListener('mousemove', (e) => {
+    const x = e.clientX + 'px';
+    const y = e.clientY + 'px';
+    overlay.style.setProperty('--mouse-x', x);
+    overlay.style.setProperty('--mouse-y', y);
+    overlay.style.setProperty('--glow-opacity', '1');
+    dots.style.setProperty('--mouse-x', x);
+    dots.style.setProperty('--mouse-y', y);
+    dots.style.setProperty('--glow-opacity', '1');
+  });
+
+  document.addEventListener('mouseleave', () => {
+    overlay.style.setProperty('--glow-opacity', '0');
+    dots.style.setProperty('--glow-opacity', '0');
+  });
+})();
+</script>
+
+<!-- Language toggle -->
+<script>
+function setLang(lang) {
+  // Update all toggle buttons (desktop + mobile)
+  document.querySelectorAll('#lang-btn-de, .lang-btn-de').forEach(btn => {
+    btn.classList.toggle('font-bold', lang === 'de');
+    btn.classList.toggle('text-on-surface', lang === 'de');
+    btn.classList.toggle('opacity-50', lang !== 'de');
+    btn.classList.toggle('text-on-surface-variant', lang !== 'de');
+  });
+  document.querySelectorAll('#lang-btn-en, .lang-btn-en').forEach(btn => {
+    btn.classList.toggle('font-bold', lang === 'en');
+    btn.classList.toggle('text-on-surface', lang === 'en');
+    btn.classList.toggle('opacity-50', lang !== 'en');
+    btn.classList.toggle('text-on-surface-variant', lang !== 'en');
+  });
+
+  // Swap .lang-en / .lang-de elements
+  document.querySelectorAll('.lang-en').forEach(el => {
+    el.classList.toggle('hidden', lang !== 'en');
+    if (el.tagName === 'SELECT' || el.tagName === 'INPUT') {
+      el.disabled = lang !== 'en';
+    }
+  });
+  document.querySelectorAll('.lang-de').forEach(el => {
+    el.classList.toggle('hidden', lang !== 'de');
+    if (el.tagName === 'SELECT' || el.tagName === 'INPUT') {
+      el.disabled = lang !== 'de';
+    }
+  });
+
+  // Toggle content-de / content-en blocks (privacy, imprint)
+  const contentDe = document.getElementById('content-de');
+  const contentEn = document.getElementById('content-en');
+  if (contentDe && contentEn) {
+    contentDe.classList.toggle('hidden', lang === 'en');
+    contentEn.classList.toggle('hidden', lang !== 'en');
+  }
+
+  // Update page title via data attributes (privacy, imprint)
+  const titleEl = document.getElementById('page-title');
+  if (titleEl) {
+    const html = document.documentElement;
+    const titleEn = html.dataset.titleEn;
+    const titleDe = html.dataset.titleDe;
+    if (titleEn && titleDe) {
+      titleEl.textContent = lang === 'en' ? titleEn : titleDe;
+    }
+  }
+
+  // Update form placeholders
+  document.querySelectorAll('[data-placeholder-en]').forEach(el => {
+    el.placeholder = lang === 'de' ? el.dataset.placeholderDe : el.dataset.placeholderEn;
+  });
+
+  // Update section typewriters (index page)
+  document.querySelectorAll('.section-typewriter').forEach(el => {
+    const fullText = lang === 'de' ? (el.dataset.fullDe || el.dataset.full) : el.dataset.full;
+    if (el.textContent === el.dataset.full || el.textContent === el.dataset.fullDe || el.textContent.length <= 1) {
+      el.textContent = fullText.charAt(0);
+      el.dataset.currentFull = fullText;
+      delete el.dataset.typed;
+    }
+  });
+
+  // Update html lang attribute
+  document.documentElement.lang = lang;
+
+  localStorage.setItem('lang', lang);
+}
+
+// Restore saved preference
+(function() {
+  const saved = localStorage.getItem('lang');
+  if (saved) setLang(saved);
+})();
+</script>

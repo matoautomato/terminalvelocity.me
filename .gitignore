@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Hidden tool/config directories
+.*/
+
+# Internal working files
+tasks/
+
+# Source copy & design docs (not part of the live site)
+copy.md
+copy_de.md
+design.md
