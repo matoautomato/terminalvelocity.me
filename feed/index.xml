@@ -7,6 +7,41 @@
     <language>en</language>
     <atom:link href="https://terminalvelocity.me/feed/index.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Cognitive Debt with AI-generated Code</title>
+      <link>https://terminalvelocity.me/blog/cognitive-debt/</link>
+      <guid isPermaLink="true">https://terminalvelocity.me/blog/cognitive-debt/</guid>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <description>Cognitive debt is an old problem wearing new clothes. If you are reading this, you have seen it before – a senior engineer leaves, and suddenly the team is scared to touch half the codebase because nobody else understood why it worked the way it did. Things break, and no one knows where to look. That was always a risk. Agentic coding just accelerates that phenomenon to light speed.</description>
+      <content:encoded><![CDATA[<p class="mb-4">Cognitive debt is an old problem wearing new clothes. If you are reading this, you have seen it before – a senior engineer leaves, and suddenly the team is scared to touch half the codebase because nobody else understood <em>why</em> it worked the way it did. Things break, and no one knows where to look. That was always a risk. Agentic coding just accelerates that phenomenon to light speed.</p>
+
+    <p class="mb-4">The term was coined by Margaret Storey, a computer science professor who's been studying developer productivity for over two decades. There's also a <a href="https://www.media.mit.edu/publications/your-brain-on-chatgpt/" class="text-primary hover:text-secondary-accent underline" target="_blank" rel="noopener noreferrer">MIT paper</a> that frames it more broadly – the accumulated cognitive cost of outsourcing your thinking to LLMs. Consistent underperformance at neural, linguistic, and behavioural levels in LLM-heavy groups compared to non-users. Polemically shortened: the cost of becoming more stupid through AI usage.</p>
+
+    <p class="mb-4">But in software, cognitive debt isn't about individual intelligence. It's about <em>shared theory</em> or the collective understanding your team has about how a system works, why decisions were made, and what the boundaries are. Technical debt in the same vein is not some magical, autonomous deterioration of code - it's also the collective human factor, the accumulation of architectural decisions over time that make maintenance harder and harder. Cognitive debt is the same mechanic, but instead of the code degrading, your shared understanding of it does. Then production is down and your team is staring at the code like it's some ancient Mesopotamian stonewall.</p>
+
+    <p class="mb-4">The dangerous thing is that you might recognise it as a problem when it's already too late to cheaply reverse. Your velocity metrics look fantastic. You shipped (insert fantastic number of choice)% more features this quarter, all on AI-steroids. But when an incident hits an AI-written module and the resolution takes four times longer because nobody can trace the logic – that's your interest payment on cognitive debt. And more API usage billed for your GitHub Copilot.</p>
+
+    <p class="mb-4">So what do you actually do about it?</p>
+
+    <p class="mb-4">The natural cure might simply be the end of subsidised token use – I swear, one of these days I will write that blog post about the real pricing of AI-compute, but today is not the day. Maybe it will just stay a meme to hide in every single blog post I write. But running out of a session limit with your Claude Max subscription has the same effect: slowing down. And slowing down is, annoyingly, the point.</p>
+
+    <p class="mb-4">The practices to prevent cognitive debt already exist. TDD, pair programming, refactoring, rigorous code review. Nothing new. Code review in particular was never really about catching bugs – it was the primary mechanism for knowledge transfer. Juniors learned architecture by reading senior PRs. Seniors maintained context by reviewing everything. AI bypasses that entire loop. The code shows up, it works, tests pass, it gets merged. Nobody learned anything. Nobody built context.</p>
+
+    <p class="mb-4">You could spin up agents to review and document for you – but they cannot retain the shared theory your team needs, the <em>why</em> your code works a certain way. They can generate decision records, sure, but those still need human eyes to become shared understanding. As long as agents can't hold that memory for your team, the rule is straightforward: at least one team member must be able to explain any AI-generated code change before it ships. Not read it. <em>Explain</em> it. Can I walk a teammate through every line? Do I understand why this approach was chosen over alternatives? Could I debug this at 3 a.m. without reprompting? If the answer to any of those is no, it doesn't merge.</p>
+
+    <p class="mb-4">I am a huge proponent of velocity over everything...it's literally in the name of the blog. But speed without understanding is not velocity. You will be sprinting on borrowed time.</p>
+
+    <hr class="border-outline-variant/30 my-8"/>
+
+    <p class="mb-4"><strong>Further reading:</strong></p>
+
+    <ul class="list-disc list-inside mb-4 space-y-1">
+      <li><a href="https://margaretstorey.com/blog/2026/02/09/cognitive-debt/" class="text-primary hover:text-secondary-accent underline" target="_blank" rel="noopener noreferrer">Margaret Storey – Cognitive Debt</a></li>
+      <li><a href="https://margaretstorey.com/blog/2026/02/18/cognitive-debt-revisited/" class="text-primary hover:text-secondary-accent underline" target="_blank" rel="noopener noreferrer">Margaret Storey – Cognitive Debt Revisited</a></li>
+      <li><a href="https://www.media.mit.edu/publications/your-brain-on-chatgpt/" class="text-primary hover:text-secondary-accent underline" target="_blank" rel="noopener noreferrer">Kosmyna et al. – &ldquo;Your Brain on ChatGPT: Accumulation of Cognitive Debt When Using an AI Assistant for Essay Writing Task&rdquo;</a></li>
+    </ul>]]></content:encoded>
+      <enclosure url="https://terminalvelocity.me/assets/og-card.png" type="image/png" length="0"/>
+    </item>
+    <item>
       <title>From scribe to architect: what happens after coding is solved?</title>
       <link>https://terminalvelocity.me/blog/scribe-to-architect/</link>
       <guid isPermaLink="true">https://terminalvelocity.me/blog/scribe-to-architect/</guid>
