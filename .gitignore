@@ -14,3 +14,6 @@ tasks/
 copy.md
 copy_de.md
 design.md
+
+# Blog drafts (consumed by publish.py, not part of the live site)
+blog/drafts/
