@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matthias Leyendecker — Chief Product Officer &amp; Co-Founder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-text: #1a1a1a;
+      --color-text-secondary: #4a4a4a;
+      --color-text-light: #6a6a6a;
+      --color-border: #d0d0d0;
+      --color-border-light: #e8e8e8;
+      --color-bg: #ffffff;
+      --color-accent: #2a2a2a;
+      --color-tag-bg: #f4f4f4;
+      --color-tag-border: #ddd;
+      --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --page-max-width: 800px;
+      --page-padding: 2rem;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.6;
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+      padding: var(--page-padding);
+    }
+
+    /* Header */
+    .cv-header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid var(--color-accent);
+    }
+
+    .cv-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
+    }
+
+    .cv-header .title {
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      margin-bottom: 0.75rem;
+    }
+
+    .cv-header .contact {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--color-text-light);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0;
+      letter-spacing: 0.01em;
+    }
+
+    .cv-header .contact span,
+    .cv-header .contact a {
+      white-space: nowrap;
+    }
+
+    .cv-header .contact span + span::before,
+    .cv-header .contact span + a::before,
+    .cv-header .contact a + span::before,
+    .cv-header .contact a + a::before {
+      content: "|";
+      margin: 0 0.5rem;
+      color: var(--color-border);
+    }
+
+    .cv-header .contact a {
+      color: var(--color-text-light);
+      text-decoration: none;
+    }
+
+    .cv-header .contact a:hover {
+      color: var(--color-text);
+    }
+
+    /* Sections */
+    .cv-section {
+      margin-bottom: 1.9rem;
+    }
+
+    .cv-section h2 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text);
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Summary */
+    .cv-summary p {
+      color: var(--color-text-secondary);
+      font-size: 0.95rem;
+    }
+
+    /* Competencies */
+    .cv-competencies ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .cv-competencies li {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.7rem;
+      background: var(--color-tag-bg);
+      border: 1px solid var(--color-tag-border);
+      border-radius: 3px;
+      color: var(--color-text-secondary);
+    }
+
+    /* Experience entries */
+    .cv-entry {
+      margin-bottom: 1.25rem;
+    }
+
+    .cv-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .cv-entry-header h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .cv-entry-header .dates {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      white-space: nowrap;
+    }
+
+    .cv-entry .subtitle {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--color-text-light);
+      margin-bottom: 0.35rem;
+    }
+
+    .cv-entry .entry-summary {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .cv-entry ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+
+    .cv-entry li {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 0.15rem;
+    }
+
+    /* Achievements list */
+    .cv-achievements ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+
+    .cv-achievements li {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    /* Education, Board Roles, Certs */
+    .cv-simple-entry {
+      margin-bottom: 0.6rem;
+    }
+
+    .cv-simple-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-simple-entry .main-line {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .cv-simple-entry .detail-line {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+    }
+
+    /* Languages — inline */
+    .cv-languages ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.5rem;
+    }
+
+    .cv-languages li {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+    }
+
+    .cv-languages .level {
+      color: var(--color-text-light);
+    }
+
+    /* Interests — inline like languages */
+    .cv-interests ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.5rem;
+    }
+
+    .cv-interests li {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+    }
+
+    /* Publications */
+    .cv-publications .cv-entry ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    /* Download button */
+    .cv-download {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: var(--color-accent);
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.85rem;
+      font-family: var(--font-sans);
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: background 0.2s;
+    }
+
+    .cv-download:hover {
+      background: #000;
+    }
+
+    /* Print styles */
+    @page {
+      size: A4;
+      margin: 12mm 12mm 12mm 12mm;
+    }
+
+    @media print {
+      .cv-download {
+        display: none;
+      }
+
+      html {
+        font-size: 9.5pt;
+      }
+
+      body {
+        padding: 0;
+        max-width: none;
+        line-height: 1.4;
+      }
+
+      .cv-header {
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+      }
+
+      .cv-section {
+        margin-bottom: 1.2rem;
+      }
+
+      .cv-entry {
+        margin-bottom: 0.8rem;
+      }
+
+      /* Keep section headings with their content */
+      .cv-section h2 {
+        break-after: avoid;
+      }
+
+      /* Avoid breaking inside experience entries and simple entries */
+      .cv-entry {
+        break-inside: avoid;
+      }
+
+      .cv-simple-entry {
+        break-inside: avoid;
+      }
+
+      /* Prefer page breaks between sections, not inside them */
+      .cv-section {
+        break-inside: auto;
+      }
+
+      /* Prevent orphan bullets */
+      .cv-entry li {
+        orphans: 2;
+        widows: 2;
+      }
+
+      /* Ensure competency tags don't split across pages */
+      .cv-competencies {
+        break-inside: avoid;
+      }
+
+      /* Ensure links print as plain text */
+      a {
+        color: var(--color-text-light);
+        text-decoration: none;
+      }
+
+      /* No background colors in print */
+      .cv-competencies li {
+        background: none;
+        border-color: var(--color-border);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cv-header">
+    <h1>Matthias Leyendecker</h1>
+    <div class="title">Chief Product Officer &amp; Co-Founder</div>
+    <div class="contact">
+      <span>Karlsruhe, Germany</span>
+      <a href="mailto:mlyndckr@gmail.com">mlyndckr@gmail.com</a>
+      
+      <a href="https://matthiasleyendecker.com">matthiasleyendecker.com</a>
+      <a href="https://linkedin.com/in/mlyndckr/">LinkedIn</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="cv-section cv-summary">
+      <h2>Executive Summary</h2>
+      <p>Product and technology leader who builds platforms from scratch and transforms existing ones at scale. 15+ years across start-up, corporate, and investor-backed environments in US, UK, and EU markets. From enterprise sales through product leadership to co-founding a fintech company. Equally comfortable defining long-term platform architecture and closing enterprise deals. Deep domain expertise in payments, lending, BNPL, and fraud prevention.
+</p>
+    </section>
+
+    <section class="cv-section cv-competencies">
+      <h2>Core Competencies</h2>
+      <ul>
+        <li>Product-Led Growth &amp; Strategy</li>
+        <li>Venture Building &amp; Scaling</li>
+        <li>P&amp;L Ownership</li>
+        <li>Scaling Distributed Teams</li>
+        <li>Board &amp; Stakeholder Management</li>
+        <li>Enterprise Sales &amp; Partnerships</li>
+        <li>Platform &amp; API Architecture</li>
+        <li>M&amp;A Integration &amp; Consolidation</li>
+        <li>Regulatory Compliance &amp; Certification</li>
+        <li>Go-to-Market Strategy</li>
+        <li>AI Strategy &amp; Evaluation</li>
+        <li>AI Integration &amp; Automation</li>
+      </ul>
+    </section>
+
+
+    <section class="cv-section">
+      <h2>Professional Experience</h2>
+      <article class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Chief Product Officer &amp; Co-Founder — Payla</h3>
+          <span class="dates">2021-09 – present</span>
+        </div>
+        <div class="subtitle">Karlsruhe · Remote</div>
+        <p class="entry-summary">Co-founded a B2B fintech company from zero to 10-figure GMV and enterprise clients across Europe.
+</p>
+        <ul>
+          <li>Built a white-label BNPL platform, reaching market feature parity in 14 months with MVP live within 5</li>
+          <li>Achieved 2.4x average annual revenue growth, scaling with a fully distributed team across 12 European countries</li>
+          <li>Drove fundraising as product and technology co-founder, shaping the product narrative that secured investment rounds</li>
+          <li>Scaled cross-functional product, design, and engineering teams, introducing agile processes and maintaining 99.9% platform uptime</li>
+          <li>Deployed AI across operations: RAG-powered knowledge management and ML-based anomaly detection for fraud prevention</li>
+          <li>Secured key enterprise clients (Rossmann, Stripe, Payone) and enabled partner-led go-to-market strategies</li>
+          <li>Maintained enterprise customization ratio of &lt; 5%, balancing scalability with client-specific needs</li>
+          <li>Led successful SOC 2 (Type I/II) and ISAE3402 (Type I/II) certifications</li>
+        </ul>
+      </article>
+      <article class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Group Product Manager — Unzer</h3>
+          <span class="dates">2020-10 – 2021-08</span>
+        </div>
+        <div class="subtitle">Heidelberg · Hybrid</div>
+        <p class="entry-summary">Acquired as part of Paysafe&#x27;s BNPL division by Unzer, retained to lead product across both the legacy and acquired platforms through post-merger integration.
+</p>
+        <ul>
+          <li>Owned product strategy for both BNPL platforms post-acquisition, serving as the bridge between the acquired team and the existing organization</li>
+          <li>Led platform consolidation, migrating clients to the leading platform within 12 months and delivering significant cost savings</li>
+          <li>Defined and launched a unified BNPL product portfolio for enterprise and SME clients under the Unzer brand</li>
+        </ul>
+      </article>
+      <article class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Head of Product — Paysafe Pay Later / payolution</h3>
+          <span class="dates">2015-08 – 2020-10</span>
+        </div>
+        <div class="subtitle">Vienna · Hybrid</div>
+        <p class="entry-summary">Scaled the product function and BNPL platform across 5 time zones, contributing to consistent company growth in a consolidating market.
+</p>
+        <ul>
+          <li>Launched one of the first BNPL POS solutions in the DACH region in partnership with Decathlon, delivering an MVP within 2 months and driving 80% YOY growth</li>
+          <li>Led international expansion into the US, UK, and Netherlands, adapting regulatory frameworks, rebuilding onboarding and risk/fraud systems, and hiring local product and analytics teams</li>
+          <li>Built the product function from 2 to 7 people, establishing all discovery practices, frameworks, and processes from scratch</li>
+          <li>Owned full product lifecycle across multiple BNPL products, from pricing and positioning to go-to-market, delivering consistently through annual PE-driven strategy shifts</li>
+        </ul>
+      </article>
+      <article class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Account Manager — arvato Financial Solutions</h3>
+          <span class="dates">2012-02 – 2015-07</span>
+        </div>
+        <div class="subtitle">Baden-Baden · Hybrid</div>
+        <p class="entry-summary">First fintech role. Enterprise sales for payments and risk solutions, building the domain expertise that later led to a product career.
+</p>
+        <ul>
+          <li>Integrated arvato&#x27;s risk software into a major payment infrastructure provider (PAY.ON), opening an indirect sales channel that scaled to 200+ SME clients and multiple enterprise accounts</li>
+          <li>Won and managed enterprise accounts across e-commerce and fashion, using consultative, data-driven sales approaches</li>
+          <li>Built strategic partnerships and intermediary networks across national and international markets in e-commerce and fintech</li>
+        </ul>
+      </article>
+      <article class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Customer Retention &amp; Sales Agent (part-time) — walter Services</h3>
+          <span class="dates">2010-12 – 2012-01</span>
+        </div>
+        <div class="subtitle">Karlsruhe · On-site</div>
+        <p class="entry-summary">Part-time engagement during a gap year travelling Australia, USA, Canada, and New Zealand.
+</p>
+      </article>
+      <article class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Assistant to General Manager — Thyssen Krupp Xervon</h3>
+          <span class="dates">2008-04 – 2010-10</span>
+        </div>
+        <div class="subtitle">Munich · On-site</div>
+        <p class="entry-summary">Hands-on exposure to company operations, from capacity planning and financial reporting to team onboarding, building internal tooling to streamline resource allocation across project teams.
+</p>
+      </article>
+    </section>
+
+
+
+    <section class="cv-section">
+      <h2>Education</h2>
+      <div class="cv-simple-entry">
+        <div class="main-line">B.A. Economics</div>
+        <div class="detail-line">Ludwig-Maximilians-Universität Munich — 2008</div>
+      </div>
+    </section>
+
+    <section class="cv-section cv-competencies">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Agile Leadership</li>
+        <li>Scrum Master</li>
+        <li>Design Thinking</li>
+      </ul>
+    </section>
+
+    <section class="cv-section cv-languages">
+      <h2>Languages</h2>
+      <ul>
+        <li>German <span class="level">— Native</span></li>
+        <li>English <span class="level">— Fluent</span></li>
+        <li>Serbian <span class="level">— Native</span></li>
+        <li>Croatian <span class="level">— Native</span></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <button class="cv-download" onclick="window.print()">Download as PDF</button>
+
+</body>
+</html>
