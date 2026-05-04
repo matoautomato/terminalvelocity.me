@@ -35,12 +35,6 @@ PAGES = {
         "has_modal": True,
         "nav_cta": "booking",
     },
-    "blog-landing": {
-        "template": "blog-landing.html",
-        "output": "blog/index.html",
-        "has_modal": True,
-        "nav_cta": "booking",
-    },
     "privacy": {
         "template": "privacy.html",
         "output": "privacy/index.html",
