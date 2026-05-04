@@ -1,0 +1,2 @@
+/blog/*  /blog/:splat  410
+/feed/*  /feed/:splat  410
