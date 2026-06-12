@@ -176,6 +176,25 @@ section > .wrap > h2 .slashes { color: var(--accent); }
   @keyframes blink { 50% { opacity: 0; } }
 }
 
+/* ---- cursor glow: mouse-only, motion-OK only ---- */
+#glow-overlay, #glow-dots { display: none; }
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  #glow-overlay {
+    display: block; position: fixed; inset: 0; pointer-events: none; z-index: 1;
+    background: radial-gradient(circle 160px at var(--mouse-x, -200px) var(--mouse-y, -200px),
+      color-mix(in srgb, var(--accent) 25%, transparent) 0%, transparent 100%);
+    opacity: var(--glow-opacity, 0); transition: opacity 0.3s ease;
+  }
+  #glow-dots {
+    display: block; position: fixed; inset: 0; pointer-events: none; z-index: 2;
+    background-image: radial-gradient(circle, var(--accent) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    mask-image: radial-gradient(circle 120px at var(--mouse-x, -200px) var(--mouse-y, -200px), black 0%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle 120px at var(--mouse-x, -200px) var(--mouse-y, -200px), black 0%, transparent 100%);
+    opacity: var(--glow-opacity, 0); transition: opacity 0.3s ease;
+  }
+}
+
 /* ---- header ---- */
 header {
   position: sticky; top: 0; z-index: 10;
@@ -323,6 +342,10 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
 <body>
 <a class="skip-link" href="#main">skip to content</a>
 
+<!-- cursor glow layers - hidden on touch and reduced-motion via CSS -->
+<div id="glow-overlay" aria-hidden="true"></div>
+<div id="glow-dots" aria-hidden="true"></div>
+
 <header>
   <div class="wrap">
     <a class="logo" href="/"><span class="slashes">//</span> ml<span class="cursor">_</span></a>
@@ -426,8 +449,7 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
             &ndash; BNPL vs. traditional banking, why remote work doesn&rsquo;t exist,
             what AI actually does to organisations.</li>
         <li>Still ships code: constraint solvers, static-site tooling, this page &ndash;
-            <a href="https://github.com/matoautomato" rel="noopener">github.com/matoautomato</a>.
-            No JavaScript was harmed (or used) in the making of this site.</li>
+            <a href="https://github.com/matoautomato" rel="noopener">github.com/matoautomato</a>.</li>
       </ul>
     </div>
   </section>
@@ -499,5 +521,23 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  const overlay=document.getElementById('glow-overlay');
+  const dots=document.getElementById('glow-dots');
+  if(!overlay||!dots) return;
+  document.addEventListener('mousemove',(e)=>{
+    const x=e.clientX+'px', y=e.clientY+'px';
+    overlay.style.setProperty('--mouse-x',x); overlay.style.setProperty('--mouse-y',y);
+    overlay.style.setProperty('--glow-opacity','1');
+    dots.style.setProperty('--mouse-x',x); dots.style.setProperty('--mouse-y',y);
+    dots.style.setProperty('--glow-opacity','1');
+  });
+  document.addEventListener('mouseleave',()=>{
+    overlay.style.setProperty('--glow-opacity','0'); dots.style.setProperty('--glow-opacity','0');
+  });
+})();
+</script>
 </body>
 </html>
