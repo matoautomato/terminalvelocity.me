@@ -259,11 +259,9 @@ header nav a:hover { color: var(--hot); }
 }
 .btn.solid { background: var(--accent); color: var(--accent-ink); }
 .btn.solid:hover { background: var(--hot); border-color: var(--hot); color: var(--accent-ink); }
-.btn.ghost { color: var(--accent); }
-.btn.ghost:hover { color: var(--hot); border-color: var(--hot); }
 
 /* ---- four vantage points ---- */
-.vantage-intro { font-size: var(--text-2xl); font-weight: 400; line-height: 1.35; text-wrap: balance; margin-bottom: 3rem; }
+.vantage-intro { font-size: var(--text-2xl); font-weight: 400; line-height: 1.35; margin-bottom: 3rem; }
 .vantage {
   display: grid; gap: 1rem;
   grid-template-columns: 1fr;
@@ -318,8 +316,8 @@ header nav a:hover { color: var(--hot); }
 
 /* ---- contact ---- */
 .contact-lede { font-size: var(--text-l); color: var(--ink-soft); margin-bottom: 2rem; }
-.channels { font-family: var(--mono); font-size: var(--text-m); line-height: 2.4; word-spacing: 0.5ch; color: var(--ink-soft); }
-.channels a { text-transform: lowercase; }
+.channels { font-family: var(--mono); font-size: var(--text-l); line-height: 2.4; word-spacing: 0.5ch; color: var(--ink-soft); }
+.channels a { text-transform: lowercase; font-weight: 700; }
 
 /* ---- footer ---- */
 footer { border-top: 1px solid var(--line); padding-block: 2rem 3rem; }
@@ -382,7 +380,8 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
         </p>
         <div class="cta-row">
           <a class="btn solid" href="mailto:matthias.leyendecker@proton.me">email me</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/mlyndckr/" target="_blank" rel="noopener noreferrer">linkedin</a>
+          <a class="btn solid" href="https://terminalvelocity.blog" target="_blank" rel="noopener noreferrer">blog</a>
+          <a class="btn solid" href="https://www.linkedin.com/in/mlyndckr/" target="_blank" rel="noopener noreferrer">linkedin</a>
         </div>
       </div>
     </div>
