@@ -1,354 +1,519 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matthias Leyendecker — Chief Product Officer &amp; Co-Founder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<title>cv – Matthias Leyendecker, BNPL &amp; payments product founder</title>
-<meta name="description" content="CV of Matthias Leyendecker - BNPL and payments product founder. CPO & Co-Founder at Payla, previously Unzer, Paysafe Pay Later, arvato Financial Solutions.">
-<link rel="canonical" href="https://terminalvelocity.me/cv/">
-<meta property="og:title" content="cv – Matthias Leyendecker, BNPL &amp; payments product founder">
-<meta property="og:description" content="CV of Matthias Leyendecker - BNPL and payments product founder. CPO & Co-Founder at Payla, previously Unzer, Paysafe Pay Later, arvato Financial Solutions.">
-<meta property="og:image" content="https://terminalvelocity.me/assets/og-card.png">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary_large_image">
+    :root {
+      --color-text: #1a1a1a;
+      --color-text-secondary: #4a4a4a;
+      --color-text-light: #6a6a6a;
+      --color-border: #d0d0d0;
+      --color-border-light: #e8e8e8;
+      --color-bg: #ffffff;
+      --color-accent: #2a2a2a;
+      --color-tag-bg: #f4f4f4;
+      --color-tag-border: #ddd;
+      --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --page-max-width: 800px;
+      --page-padding: 2rem;
+    }
 
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-<style>
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/assets/fonts/jetbrains-mono-400.woff2") format("woff2");
-  font-weight: 400; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/assets/fonts/jetbrains-mono-700.woff2") format("woff2");
-  font-weight: 700; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("/assets/fonts/inter-400.woff2") format("woff2");
-  font-weight: 400; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("/assets/fonts/inter-600.woff2") format("woff2");
-  font-weight: 600; font-style: normal; font-display: swap;
-}
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.6;
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+      padding: var(--page-padding);
+    }
 
-:root {
-  --bg: #fcfbf7;
-  --bg-raised: #f4f3ee;
-  --ink: #1c1c1c;
-  --ink-soft: #45474a;
-  --line: #d9d8d1;
-  --dot: #d3d2cb;
-  --accent: #5b4fae;
-  --accent-ink: #ffffff;
-  --hot: #a85b07;
-  --ok: #2e7d4f;
-  --mono: "JetBrains Mono", ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
-  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --text-xs: 0.75rem;
-  --text-s: 0.875rem;
-  --text-m: 1.0625rem;
-  --text-l: clamp(1.15rem, 1.02rem + 0.6vw, 1.35rem);
-  --text-xl: clamp(1.45rem, 1.2rem + 1.1vw, 1.9rem);
-  --text-2xl: clamp(1.8rem, 1.4rem + 1.8vw, 2.5rem);
-  --wrap: 46rem;
-  --measure: 62ch;
-}
+    /* Header */
+    .cv-header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid var(--color-accent);
+    }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #15141a;
-    --bg-raised: #1d1c24;
-    --ink: #e9e7e1;
-    --ink-soft: #a8a6b0;
-    --line: #2e2d38;
-    --dot: #26252f;
-    --accent: #a89ae8;
-    --accent-ink: #15141a;
-    --hot: #e0a04c;
-    --ok: #5fbd84;
-  }
-}
+    .cv-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
+    }
 
-*, *::before, *::after { box-sizing: border-box; }
-body, h1, h2, h3, p, ol, ul, dl, dd, figure { margin: 0; }
-ol[class], ul[class] { padding: 0; list-style: none; }
-img, svg { display: block; max-width: 100%; }
+    .cv-header .title {
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      margin-bottom: 0.75rem;
+    }
 
-html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-}
+    .cv-header .contact {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--color-text-light);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0;
+      letter-spacing: 0.01em;
+    }
 
-body {
-  font-family: var(--sans);
-  font-size: var(--text-m);
-  line-height: 1.65;
-  color: var(--ink);
-  background-color: var(--bg);
-  background-image: radial-gradient(var(--dot) 1px, transparent 1px);
-  background-size: 24px 24px;
-  -webkit-font-smoothing: antialiased;
-}
+    .cv-header .contact span,
+    .cv-header .contact a {
+      white-space: nowrap;
+    }
 
-::selection { background: color-mix(in srgb, var(--accent) 25%, transparent); }
+    .cv-header .contact span + span::before,
+    .cv-header .contact span + a::before,
+    .cv-header .contact a + span::before,
+    .cv-header .contact a + a::before {
+      content: "|";
+      margin: 0 0.5rem;
+      color: var(--color-border);
+    }
 
-.wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 2.5rem); }
-a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-a:hover { color: var(--hot); }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+    .cv-header .contact a {
+      color: var(--color-text-light);
+      text-decoration: none;
+    }
 
-.skip-link {
-  position: absolute; left: -200vw; top: 0;
-  background: var(--accent); color: var(--accent-ink);
-  padding: 0.5rem 1rem; font-family: var(--mono); font-size: var(--text-s);
-}
-.skip-link:focus { left: 0.5rem; top: 0.5rem; z-index: 99; }
+    .cv-header .contact a:hover {
+      color: var(--color-text);
+    }
 
-.cursor { display: inline-block; color: var(--accent); }
-@media (prefers-reduced-motion: no-preference) {
-  .cursor { animation: blink 1.1s steps(1) infinite; }
-  @keyframes blink { 50% { opacity: 0; } }
-}
+    /* Sections */
+    .cv-section {
+      margin-bottom: 1.9rem;
+    }
 
-header {
-  position: sticky; top: 0; z-index: 10;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line);
-}
-header .wrap {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding-block: 0.9rem;
-}
-.logo {
-  font-family: var(--mono); font-size: 1.15rem; color: var(--ink);
-  text-decoration: none; white-space: nowrap;
-}
-.logo .slashes { color: var(--accent); }
-header nav { display: flex; gap: clamp(0.9rem, 3vw, 2rem); }
-header nav a {
-  font-family: var(--mono); font-size: var(--text-s); text-transform: lowercase;
-  color: var(--ink-soft); text-decoration: none;
-}
-header nav a:hover { color: var(--hot); }
+    .cv-section h2 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text);
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
 
-main { padding-block: clamp(3rem, 8vh, 5rem); }
+    /* Summary */
+    .cv-summary p {
+      color: var(--color-text-secondary);
+      font-size: 0.95rem;
+    }
 
-h1 {
-  font-family: var(--mono); font-weight: 700; font-size: var(--text-2xl);
-  line-height: 1.1; letter-spacing: -0.02em; text-transform: lowercase;
-  margin-bottom: 0.75rem;
-}
-h1 .slashes { color: var(--accent); }
+    /* Competencies */
+    .cv-competencies ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
 
-.lede { font-size: var(--text-l); color: var(--ink-soft); max-width: var(--measure); margin-bottom: 2.5rem; }
+    .cv-competencies li {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.7rem;
+      background: var(--color-tag-bg);
+      border: 1px solid var(--color-tag-border);
+      border-radius: 3px;
+      color: var(--color-text-secondary);
+    }
 
-.prose h2 {
-  font-family: var(--mono); font-weight: 700; font-size: var(--text-l);
-  text-transform: lowercase; letter-spacing: -0.01em;
-  margin-block: 2.5rem 0.75rem;
-}
-.prose h2 .slashes { color: var(--accent); }
-.prose p, .prose ul, .prose dl { max-width: var(--measure); margin-bottom: 1rem; color: var(--ink-soft); }
-.prose ul { padding-left: 1.2rem; }
-.prose li { margin-bottom: 0.4rem; }
-.prose strong { color: var(--ink); font-weight: 600; }
-.prose address { font-style: normal; }
+    /* Experience entries */
+    .cv-entry {
+      margin-bottom: 1.25rem;
+    }
 
-footer { border-top: 1px solid var(--line); padding-block: 2rem 3rem; }
-footer .wrap {
-  display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem;
-  justify-content: space-between; align-items: center;
-  font-family: var(--mono); font-size: var(--text-s); color: var(--ink-soft);
-}
-footer a { color: var(--ink-soft); }
-footer a:hover { color: var(--hot); }
-footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
-.glider { color: var(--accent); }
+    .cv-entry:last-child {
+      margin-bottom: 0;
+    }
 
-/* ---- cv ---- */
-.cv-meta { font-family: var(--mono); font-size: var(--text-s); color: var(--ink-soft); margin-bottom: 2.5rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; }
-.role { font-family: var(--mono); font-weight: 700; font-size: var(--text-m); margin-bottom: 0.1rem; }
-.role span { color: var(--accent); }
-.job { border-left: 3px solid var(--line); padding-left: 1.25rem; margin-bottom: 2rem; }
-.job .when { font-family: var(--mono); font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.6rem; }
-.job .sum { color: var(--ink); margin-bottom: 0.75rem; max-width: var(--measure); }
-.job ul { padding-left: 1.2rem; max-width: var(--measure); color: var(--ink-soft); margin-bottom: 0; }
-.job li { margin-bottom: 0.35rem; font-size: var(--text-s); }
-.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; max-width: var(--measure); padding: 0; list-style: none; }
-.tags li { font-family: var(--mono); font-size: var(--text-xs); border: 1px solid var(--line); border-radius: 2px; padding: 0.25rem 0.6rem; color: var(--ink-soft); margin: 0; }
-.print-note { font-family: var(--mono); font-size: var(--text-s); color: var(--ink-soft); margin-top: 3rem; }
+    .cv-entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem 1rem;
+      margin-bottom: 0.3rem;
+    }
 
-@media print {
-  body { background: #fff; background-image: none; color: #000; font-size: 10.5pt; }
-  header, footer, .print-note, .skip-link { display: none; }
-  main { padding-block: 0; }
-  a { color: inherit; text-decoration: none; }
-  .job { break-inside: avoid; }
-}
-</style>
+    .cv-entry-header h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .cv-entry-header .dates {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      white-space: nowrap;
+    }
+
+    .cv-entry .subtitle {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--color-text-light);
+      margin-bottom: 0.35rem;
+    }
+
+    .cv-entry .entry-summary {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .cv-entry ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+
+    .cv-entry li {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 0.15rem;
+    }
+
+    /* Achievements list */
+    .cv-achievements ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+
+    .cv-achievements li {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    /* Education, Board Roles, Certs */
+    .cv-simple-entry {
+      margin-bottom: 0.6rem;
+    }
+
+    .cv-simple-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-simple-entry .main-line {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .cv-simple-entry .detail-line {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+    }
+
+    /* Languages — inline */
+    .cv-languages ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.5rem;
+    }
+
+    .cv-languages li {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+    }
+
+    .cv-languages .level {
+      color: var(--color-text-light);
+    }
+
+    /* Interests — inline like languages */
+    .cv-interests ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.5rem;
+    }
+
+    .cv-interests li {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+    }
+
+    /* Publications */
+    .cv-publications .cv-entry ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    /* Download button */
+    .cv-download {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: var(--color-accent);
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.85rem;
+      font-family: var(--font-sans);
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: background 0.2s;
+    }
+
+    .cv-download:hover {
+      background: #000;
+    }
+
+    /* Print styles */
+    @page {
+      size: A4;
+      margin: 12mm 12mm 12mm 12mm;
+    }
+
+    @media print {
+      .cv-download {
+        display: none;
+      }
+
+      html {
+        font-size: 9.5pt;
+      }
+
+      body {
+        padding: 0;
+        max-width: none;
+        line-height: 1.4;
+      }
+
+      .cv-header {
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+      }
+
+      .cv-section {
+        margin-bottom: 1.2rem;
+      }
+
+      .cv-entry {
+        margin-bottom: 0.8rem;
+      }
+
+      /* Keep section headings with their content */
+      .cv-section h2 {
+        break-after: avoid;
+      }
+
+      /* Avoid breaking inside experience entries and simple entries */
+      .cv-entry {
+        break-inside: avoid;
+      }
+
+      .cv-simple-entry {
+        break-inside: avoid;
+      }
+
+      /* Prefer page breaks between sections, not inside them */
+      .cv-section {
+        break-inside: auto;
+      }
+
+      /* Prevent orphan bullets */
+      .cv-entry li {
+        orphans: 2;
+        widows: 2;
+      }
+
+      /* Ensure competency tags don't split across pages */
+      .cv-competencies {
+        break-inside: avoid;
+      }
+
+      /* Ensure links print as plain text */
+      a {
+        color: var(--color-text-light);
+        text-decoration: none;
+      }
+
+      /* No background colors in print */
+      .cv-competencies li {
+        background: none;
+        border-color: var(--color-border);
+      }
+    }
+  </style>
 </head>
-
 <body>
-<a class="skip-link" href="#main">skip to content</a>
 
-<header>
-  <div class="wrap">
-    <a class="logo" href="/"><span class="slashes">//</span> ml<span class="cursor">_</span></a>
-    <nav aria-label="Site">
-      <a href="/">back to site</a>
-    </nav>
-  </div>
-</header>
+  <header class="cv-header">
+    <h1>Matthias Leyendecker</h1>
+    <div class="title">Chief Product Officer &amp; Co-Founder</div>
+    <div class="contact">
+      <span>Karlsruhe, Germany</span>
+      <a href="mailto:mlyndckr@gmail.com">mlyndckr@gmail.com</a>
+      
+      <a href="https://matthiasleyendecker.com">matthiasleyendecker.com</a>
+      <a href="https://linkedin.com/in/mlyndckr/">LinkedIn</a>
+    </div>
+  </header>
 
-<main id="main">
-  <div class="wrap">
-    <h1><span class="slashes">//</span> matthias leyendecker<span class="cursor">_</span></h1>
-    <p class="lede"><strong>BNPL &amp; payments product founder</strong> &ndash; CPO &amp; Co-Founder at Payla.</p>
-    <p class="cv-meta">
-      <span>karlsruhe, de</span>
-      <a href="mailto:matthias.leyendecker@proton.me">matthias.leyendecker@proton.me</a>
-      <a href="https://terminalvelocity.me">terminalvelocity.me</a>
-      <a href="https://www.linkedin.com/in/mlyndckr/" rel="noopener">linkedin</a>
-    </p>
+  <main>
+    <section class="cv-section cv-summary">
+      <h2>Executive Summary</h2>
+      <p>Product and technology leader who builds platforms from scratch and transforms existing ones at scale. 15+ years across start-up, corporate, and investor-backed environments in US, UK, and EU markets. From enterprise sales through product leadership to co-founding a fintech company. Equally comfortable defining long-term platform architecture and closing enterprise deals. Deep domain expertise in payments, lending, BNPL, and fraud prevention.
+</p>
+    </section>
 
-    <div class="prose">
-      <h2><span class="slashes">//</span> summary</h2>
-      <p>Product and technology leader who builds platforms from scratch and transforms
-         existing ones at scale. 15+ years across start-up, corporate and investor-backed
-         environments in US, UK and EU markets &ndash; from enterprise sales through product
-         leadership to co-founding a fintech company. Equally comfortable defining long-term
-         platform architecture and closing enterprise deals. Deep domain expertise in
-         payments, lending, BNPL and fraud prevention.</p>
-
-      <h2><span class="slashes">//</span> core competencies</h2>
-      <ul class="tags">
-        <li>product-led growth &amp; strategy</li>
-        <li>venture building &amp; scaling</li>
-        <li>p&amp;l ownership</li>
-        <li>scaling distributed teams</li>
-        <li>board &amp; stakeholder management</li>
-        <li>enterprise sales &amp; partnerships</li>
-        <li>platform &amp; api architecture</li>
-        <li>m&amp;a integration &amp; consolidation</li>
-        <li>regulatory compliance &amp; certification</li>
-        <li>go-to-market strategy</li>
-        <li>ai strategy &amp; evaluation</li>
-        <li>ai integration &amp; automation</li>
+    <section class="cv-section cv-competencies">
+      <h2>Core Competencies</h2>
+      <ul>
+        <li>Product-Led Growth &amp; Strategy</li>
+        <li>Venture Building &amp; Scaling</li>
+        <li>P&amp;L Ownership</li>
+        <li>Scaling Distributed Teams</li>
+        <li>Board &amp; Stakeholder Management</li>
+        <li>Enterprise Sales &amp; Partnerships</li>
+        <li>Platform &amp; API Architecture</li>
+        <li>M&amp;A Integration &amp; Consolidation</li>
+        <li>Regulatory Compliance &amp; Certification</li>
+        <li>Go-to-Market Strategy</li>
+        <li>AI Strategy &amp; Evaluation</li>
+        <li>AI Integration &amp; Automation</li>
       </ul>
+    </section>
 
-      <h2><span class="slashes">//</span> experience</h2>
 
-      <div class="job">
-        <p class="role">Chief Product Officer &amp; Co-Founder <span>&middot;</span> Payla</p>
-        <p class="when">2021-09 &ndash; present &middot; karlsruhe &middot; remote</p>
-        <p class="sum">Co-founded a B2B fintech company from zero to 10-figure GMV and
-           enterprise clients across Europe.</p>
+    <section class="cv-section">
+      <h2>Professional Experience</h2>
+      <article class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Chief Product Officer &amp; Co-Founder — Payla</h3>
+          <span class="dates">2021-09 – present</span>
+        </div>
+        <div class="subtitle">Karlsruhe · Remote</div>
+        <p class="entry-summary">Co-founded a B2B fintech company from zero to 10-figure GMV and enterprise clients across Europe.
+</p>
         <ul>
-          <li>Built a white-label BNPL platform, reaching market feature parity in 14 months with the MVP live within 5</li>
+          <li>Built a white-label BNPL platform, reaching market feature parity in 14 months with MVP live within 5</li>
           <li>Achieved 2.4x average annual revenue growth, scaling with a fully distributed team across 12 European countries</li>
           <li>Drove fundraising as product and technology co-founder, shaping the product narrative that secured investment rounds</li>
-          <li>Scaled cross-functional product, design and engineering teams, introducing agile processes and maintaining 99.9% platform uptime</li>
+          <li>Scaled cross-functional product, design, and engineering teams, introducing agile processes and maintaining 99.9% platform uptime</li>
           <li>Deployed AI across operations: RAG-powered knowledge management and ML-based anomaly detection for fraud prevention</li>
           <li>Secured key enterprise clients (Rossmann, Stripe, Payone) and enabled partner-led go-to-market strategies</li>
-          <li>Maintained an enterprise customization ratio below 5%, balancing scalability with client-specific needs</li>
-          <li>Led successful SOC 2 (Type I/II) and ISAE 3402 (Type I/II) certifications</li>
+          <li>Maintained enterprise customization ratio of &lt; 5%, balancing scalability with client-specific needs</li>
+          <li>Led successful SOC 2 (Type I/II) and ISAE3402 (Type I/II) certifications</li>
         </ul>
-      </div>
-
-      <div class="job">
-        <p class="role">Group Product Manager <span>&middot;</span> Unzer</p>
-        <p class="when">2020-10 &ndash; 2021-08 &middot; heidelberg &middot; hybrid</p>
-        <p class="sum">Acquired as part of Paysafe&rsquo;s BNPL division by Unzer, retained to lead
-           product across both the legacy and acquired platforms through post-merger integration.</p>
+      </article>
+      <article class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Group Product Manager — Unzer</h3>
+          <span class="dates">2020-10 – 2021-08</span>
+        </div>
+        <div class="subtitle">Heidelberg · Hybrid</div>
+        <p class="entry-summary">Acquired as part of Paysafe&#x27;s BNPL division by Unzer, retained to lead product across both the legacy and acquired platforms through post-merger integration.
+</p>
         <ul>
           <li>Owned product strategy for both BNPL platforms post-acquisition, serving as the bridge between the acquired team and the existing organization</li>
           <li>Led platform consolidation, migrating clients to the leading platform within 12 months and delivering significant cost savings</li>
           <li>Defined and launched a unified BNPL product portfolio for enterprise and SME clients under the Unzer brand</li>
         </ul>
-      </div>
-
-      <div class="job">
-        <p class="role">Head of Product <span>&middot;</span> Paysafe Pay Later / payolution</p>
-        <p class="when">2015-08 &ndash; 2020-10 &middot; vienna &middot; hybrid</p>
-        <p class="sum">Scaled the product function and BNPL platform across 5 time zones,
-           contributing to consistent company growth in a consolidating market.</p>
+      </article>
+      <article class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Head of Product — Paysafe Pay Later / payolution</h3>
+          <span class="dates">2015-08 – 2020-10</span>
+        </div>
+        <div class="subtitle">Vienna · Hybrid</div>
+        <p class="entry-summary">Scaled the product function and BNPL platform across 5 time zones, contributing to consistent company growth in a consolidating market.
+</p>
         <ul>
           <li>Launched one of the first BNPL POS solutions in the DACH region in partnership with Decathlon, delivering an MVP within 2 months and driving 80% YOY growth</li>
-          <li>Led international expansion into the US, UK and Netherlands, adapting regulatory frameworks, rebuilding onboarding and risk/fraud systems, and hiring local product and analytics teams</li>
-          <li>Built the product function from 2 to 7 people, establishing all discovery practices, frameworks and processes from scratch</li>
-          <li>Owned the full product lifecycle across multiple BNPL products, from pricing and positioning to go-to-market, delivering consistently through annual PE-driven strategy shifts</li>
+          <li>Led international expansion into the US, UK, and Netherlands, adapting regulatory frameworks, rebuilding onboarding and risk/fraud systems, and hiring local product and analytics teams</li>
+          <li>Built the product function from 2 to 7 people, establishing all discovery practices, frameworks, and processes from scratch</li>
+          <li>Owned full product lifecycle across multiple BNPL products, from pricing and positioning to go-to-market, delivering consistently through annual PE-driven strategy shifts</li>
         </ul>
-      </div>
-
-      <div class="job">
-        <p class="role">Account Manager <span>&middot;</span> arvato Financial Solutions</p>
-        <p class="when">2012-02 &ndash; 2015-07 &middot; baden-baden &middot; hybrid</p>
-        <p class="sum">First fintech role. Enterprise sales for payments and risk solutions,
-           building the domain expertise that later led to a product career.</p>
+      </article>
+      <article class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Account Manager — arvato Financial Solutions</h3>
+          <span class="dates">2012-02 – 2015-07</span>
+        </div>
+        <div class="subtitle">Baden-Baden · Hybrid</div>
+        <p class="entry-summary">First fintech role. Enterprise sales for payments and risk solutions, building the domain expertise that later led to a product career.
+</p>
         <ul>
-          <li>Integrated arvato&rsquo;s risk software into a major payment infrastructure provider (PAY.ON), opening an indirect sales channel that scaled to 200+ SME clients and multiple enterprise accounts</li>
+          <li>Integrated arvato&#x27;s risk software into a major payment infrastructure provider (PAY.ON), opening an indirect sales channel that scaled to 200+ SME clients and multiple enterprise accounts</li>
           <li>Won and managed enterprise accounts across e-commerce and fashion, using consultative, data-driven sales approaches</li>
           <li>Built strategic partnerships and intermediary networks across national and international markets in e-commerce and fintech</li>
         </ul>
+      </article>
+      <article class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Customer Retention &amp; Sales Agent (part-time) — walter Services</h3>
+          <span class="dates">2010-12 – 2012-01</span>
+        </div>
+        <div class="subtitle">Karlsruhe · On-site</div>
+        <p class="entry-summary">Part-time engagement during a gap year travelling Australia, USA, Canada, and New Zealand.
+</p>
+      </article>
+      <article class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Assistant to General Manager — Thyssen Krupp Xervon</h3>
+          <span class="dates">2008-04 – 2010-10</span>
+        </div>
+        <div class="subtitle">Munich · On-site</div>
+        <p class="entry-summary">Hands-on exposure to company operations, from capacity planning and financial reporting to team onboarding, building internal tooling to streamline resource allocation across project teams.
+</p>
+      </article>
+    </section>
+
+
+
+    <section class="cv-section">
+      <h2>Education</h2>
+      <div class="cv-simple-entry">
+        <div class="main-line">B.A. Economics</div>
+        <div class="detail-line">Ludwig-Maximilians-Universität Munich — 2008</div>
       </div>
+    </section>
 
-      <div class="job">
-        <p class="role">Customer Retention &amp; Sales Agent (part-time) <span>&middot;</span> walter Services</p>
-        <p class="when">2010-12 &ndash; 2012-01 &middot; karlsruhe &middot; on-site</p>
-        <p class="sum">Part-time engagement during a gap year travelling Australia, USA, Canada
-           and New Zealand.</p>
-      </div>
-
-      <div class="job">
-        <p class="role">Assistant to General Manager <span>&middot;</span> Thyssen Krupp Xervon</p>
-        <p class="when">2008-04 &ndash; 2010-10 &middot; munich &middot; on-site</p>
-        <p class="sum">Hands-on exposure to company operations, from capacity planning and
-           financial reporting to team onboarding, building internal tooling to streamline
-           resource allocation across project teams.</p>
-      </div>
-
-      <h2><span class="slashes">//</span> education</h2>
-      <p><strong>B.A. Economics</strong> &ndash; Ludwig-Maximilians-Universit&auml;t Munich, 2008</p>
-
-      <h2><span class="slashes">//</span> certifications</h2>
-      <ul class="tags">
-        <li>agile leadership</li>
-        <li>scrum master</li>
-        <li>design thinking</li>
+    <section class="cv-section cv-competencies">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Agile Leadership</li>
+        <li>Scrum Master</li>
+        <li>Design Thinking</li>
       </ul>
+    </section>
 
-      <h2><span class="slashes">//</span> languages</h2>
-      <p>German &ndash; native &middot; English &ndash; fluent &middot; Serbian &ndash; native &middot; Croatian &ndash; native</p>
+    <section class="cv-section cv-languages">
+      <h2>Languages</h2>
+      <ul>
+        <li>German <span class="level">— Native</span></li>
+        <li>English <span class="level">— Fluent</span></li>
+        <li>Serbian <span class="level">— Native</span></li>
+        <li>Croatian <span class="level">— Native</span></li>
+      </ul>
+    </section>
 
-      <p class="print-note">$ need a pdf? ctrl/cmd + p prints this page cleanly<span class="cursor">_</span></p>
-    </div>
-  </div>
-</main>
+  </main>
 
-<footer>
-  <div class="wrap">
-    <p>&copy; 2026 Matthias Leyendecker</p>
-    <div class="legal">
-      <a href="/privacy">privacy</a>
-      <a href="/imprint">imprint</a>
-      <a href="https://sandragoettisheim.de/" rel="noopener">photo: Sandra G&ouml;ttisheim</a>
-      <a href="https://en.wikipedia.org/wiki/Hacker_culture" rel="noopener" title="Hacker culture" aria-label="Hacker culture glider">
-        <svg class="glider" width="20" height="20" viewBox="-0.5 -0.5 4 4" fill="currentColor" aria-hidden="true">
-          <circle cx="1" cy="0" r="0.38"/><circle cx="2" cy="1" r="0.38"/>
-          <circle cx="0" cy="2" r="0.38"/><circle cx="1" cy="2" r="0.38"/><circle cx="2" cy="2" r="0.38"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</footer>
+  <button class="cv-download" onclick="window.print()">Download as PDF</button>
+
 </body>
 </html>
