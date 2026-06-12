@@ -250,8 +250,12 @@ header nav a:hover { color: var(--hot); }
   grid-template-columns: 1fr;
   counter-reset: vantage;
 }
+/* explicit 1 / 2 / 4 steps - auto-fit would strand a 3+1 orphan */
 @media (min-width: 48rem) {
-  .vantage { grid-template-columns: 1fr 1fr; }
+  .vantage { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 64rem) {
+  .vantage { grid-template-columns: repeat(4, 1fr); }
 }
 .vantage li {
   background: var(--bg-raised); border: 1px solid var(--line);
