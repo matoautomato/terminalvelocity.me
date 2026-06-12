@@ -318,12 +318,8 @@ header nav a:hover { color: var(--hot); }
 
 /* ---- contact ---- */
 .contact-lede { font-size: var(--text-l); color: var(--ink-soft); margin-bottom: 2rem; }
-.email-big {
-  font-family: var(--mono); font-weight: 700; font-size: var(--text-xl);
-  word-break: break-all;
-}
-.channels { display: flex; flex-wrap: wrap; gap: 0.6rem 1.75rem; margin-top: 1.75rem; }
-.channels a { font-family: var(--mono); font-size: var(--text-s); text-transform: lowercase; }
+.channels { font-family: var(--mono); font-size: var(--text-s); line-height: 2.2; color: var(--ink-soft); }
+.channels a { text-transform: lowercase; }
 
 /* ---- footer ---- */
 footer { border-top: 1px solid var(--line); padding-block: 2rem 3rem; }
@@ -491,13 +487,13 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
         LinkedIn DMs get buried. If you need a private channel, we can
         exchange Signal usernames.
       </p>
-      <p><a class="email-big" href="mailto:matthias.leyendecker@proton.me">matthias.leyendecker@proton.me</a></p>
-      <nav class="channels" aria-label="Profiles">
-        <a href="https://www.linkedin.com/in/mlyndckr/" rel="noopener">linkedin</a>
-        <a href="https://bsky.app/profile/matoautomato.bsky.social" rel="noopener">bluesky</a>
-        <a href="https://signal.me/#eu/matoautomato777" rel="noopener">signal</a>
-        <a href="https://github.com/matoautomato" rel="noopener">github</a>
-        <a href="https://terminalvelocity.blog" rel="noopener">blog</a>
+      <nav class="channels" aria-label="Contact channels">
+        <a href="mailto:matthias.leyendecker@proton.me">email</a>&nbsp;&middot;
+        <a href="https://www.linkedin.com/in/mlyndckr/" rel="noopener">linkedin</a>&nbsp;&middot;
+        <a href="https://terminalvelocity.blog" rel="noopener">blog</a>&nbsp;&middot;
+        <a href="https://bsky.app/profile/matoautomato.bsky.social" rel="noopener">bluesky</a>&nbsp;&middot;
+        <a href="https://github.com/matoautomato" rel="noopener">github</a>&nbsp;&middot;
+        <a href="https://signal.me/#eu/matoautomato777" rel="noopener">signal</a>&nbsp;&middot;
         <a href="/cv">cv</a>
       </nav>
     </div>
