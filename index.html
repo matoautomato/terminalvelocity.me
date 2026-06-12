@@ -207,7 +207,9 @@ header nav a:hover { color: var(--hot); }
   .hero .wrap { grid-template-columns: 5fr 7fr; }
 }
 .hero img {
-  max-height: 45vh; width: auto; margin-inline: auto;
+  /* 800x888 source - height:auto keeps the aspect, contain is the seatbelt */
+  width: 100%; max-width: 30rem; height: auto; object-fit: contain;
+  margin-inline: auto;
   /* fade the cutout into the page, same trick as v1 */
   mask-image: linear-gradient(to bottom, black 78%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 78%, transparent 100%);
