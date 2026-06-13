@@ -211,6 +211,12 @@ header .wrap {
   text-decoration: none; white-space: nowrap;
 }
 .logo .slashes { color: var(--accent); }
+.logo .name-short { display: none; }
+/* collapse the full name to "ml" once it would crowd the nav */
+@media (max-width: 40rem) {
+  .logo .name-full { display: none; }
+  .logo .name-short { display: inline; }
+}
 header nav { display: flex; gap: clamp(0.9rem, 3vw, 2rem); }
 header nav a {
   font-family: var(--mono); font-size: var(--text-s); text-transform: lowercase;
@@ -341,7 +347,7 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
 
 <header>
   <div class="wrap">
-    <a class="logo" href="/"><span class="slashes">//</span> ml<span class="cursor">_</span></a>
+    <a class="logo" href="/" aria-label="Matthias Leyendecker, home"><span class="slashes">//</span> <span class="name-full">matthias leyendecker</span><span class="name-short">ml</span><span class="cursor">_</span></a>
     <nav aria-label="Site">
       <a href="#track">track record</a>
       <a href="https://terminalvelocity.blog" target="_blank" rel="noopener noreferrer">blog</a>
@@ -364,7 +370,6 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
       </picture>
 
       <div>
-        <p class="kicker"><span class="slashes">//</span> matthias leyendecker</p>
         <h1 id="hero-h">i build products and the orgs that ship them<span class="cursor">_</span></h1>
         <p class="lede">
           Fifteen years across product, engineering and business, mostly in
