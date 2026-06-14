@@ -304,7 +304,8 @@ header nav a:hover { color: var(--hot); }
 .receipts strong { font-weight: 600; }
 
 /* ---- open to ---- */
-.open-list { display: grid; gap: 1.1rem; max-width: var(--measure); }
+.open-list { display: grid; gap: 1.25rem 3rem; }
+@media (min-width: 48rem) { .open-list { grid-template-columns: 1fr 1fr; } }
 .open-list li { padding-left: 1.6rem; position: relative; color: var(--ink-soft); }
 .open-list li::before {
   content: "+"; position: absolute; left: 0;
