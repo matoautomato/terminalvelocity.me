@@ -303,22 +303,16 @@ header nav a:hover { color: var(--hot); }
 }
 .receipts strong { font-weight: 600; }
 
-/* ---- signal filter ---- */
-.filter-grid { display: grid; gap: 1.5rem; }
-@media (min-width: 48rem) { .filter-grid { grid-template-columns: 1fr 1fr; } }
-.filter-col { background: var(--bg-raised); border: 1px solid var(--line); border-radius: 2px; padding: 1.75rem; }
-.filter-col h3 {
-  font-family: var(--mono); font-size: var(--text-s); text-transform: lowercase;
-  margin-bottom: 1rem;
+/* ---- open to ---- */
+.open-list { display: grid; gap: 1.1rem; max-width: var(--measure); }
+.open-list li { padding-left: 1.6rem; position: relative; color: var(--ink-soft); }
+.open-list li::before {
+  content: "+"; position: absolute; left: 0;
+  font-family: var(--mono); color: var(--ok); font-weight: 700;
 }
-.filter-col ul { display: grid; gap: 0.75rem; font-size: var(--text-s); color: var(--ink-soft); }
-.filter-col li { padding-left: 1.5rem; position: relative; }
-.filter-col li::before { position: absolute; left: 0; font-family: var(--mono); font-weight: 700; }
-.filter-col.yes { border-left: 3px solid var(--ok); }
-.filter-col.yes li::before { content: "+"; color: var(--ok); }
-.filter-col.no  { border-left: 3px solid var(--line); }
-.filter-col.no  li::before { content: "-"; color: var(--ink-soft); }
-.filter-note { margin-top: 1.5rem; font-family: var(--mono); font-size: var(--text-s); color: var(--ink-soft); }
+.open-list strong { font-weight: 600; color: var(--ink); }
+.open-ignore { margin-top: 2rem; font-family: var(--mono); font-size: var(--text-s); color: var(--ink-soft); }
+.open-note { margin-top: 0.75rem; font-family: var(--mono); font-size: var(--text-s); color: var(--ink-soft); }
 
 /* ---- contact ---- */
 .contact-lede { font-size: var(--text-l); color: var(--ink-soft); margin-bottom: 2rem; }
@@ -380,7 +374,7 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
         </p>
         <p class="status">
           <span class="dot" aria-hidden="true"></span>
-          open to the right conversations &ndash; <a href="#filter">see what gets a reply</a>
+          <a href="#open">open to &darr;</a>
         </p>
         <div class="cta-row">
           <a class="btn solid" href="mailto:matthias.leyendecker@proton.me">email</a>
@@ -451,31 +445,19 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
     </div>
   </section>
 
-  <!-- ============ signal filter: routes good inbound, repels junk ============ -->
-  <section id="filter" aria-labelledby="filter-h">
+  <!-- ============ open to: implicit availability, no booking widget ============ -->
+  <section id="open" aria-labelledby="open-h">
     <div class="wrap">
-      <h2 id="filter-h"><span class="slashes">//</span> what gets a reply</h2>
-      <div class="filter-grid">
-        <div class="filter-col yes">
-          <h3>fast answer</h3>
-          <ul>
-            <li><strong>PSPs, banks, marketplaces</strong> building, fixing or evaluating BNPL</li>
-            <li><strong>Founder / CPO / product &amp; tech leadership</strong> conversations &ndash; fintech and other regulated or data-heavy products</li>
-            <li><strong>Partnerships and pilots</strong> in DACH payments</li>
-            <li><strong>Investors</strong> who want a domain view, not a warmed-over analyst deck</li>
-            <li><strong>Conference &amp; podcast invitations</strong> on payments, BNPL, product orgs or AI in organisations &ndash; English or German</li>
-          </ul>
-        </div>
-        <div class="filter-col no">
-          <h3>archived, kindly</h3>
-          <ul>
-            <li>Generic sales-role mandates &ndash; I sold BNPL once, in another decade; it was product education</li>
-            <li>Anything containing &ldquo;rockstar&rdquo;, &ldquo;ninja&rdquo; or &ldquo;guru&rdquo;</li>
-            <li>Sequences sent to 200 people where my name is the only variable</li>
-          </ul>
-        </div>
-      </div>
-      <p class="filter-note">languages: german, english, croatian, serbian &ndash; all native &middot; tz: europe/berlin</p>
+      <h2 id="open-h"><span class="slashes">//</span> open to</h2>
+      <ul class="open-list">
+        <li><strong>PSPs, banks and marketplaces</strong> doing something genuinely new in payments &ndash; new rails, new markets, or regulation to get ahead of.</li>
+        <li><strong>Start-ups and scale-ups</strong> putting real money and risk behind a hard problem &ndash; fintech, or any regulated, data-heavy corner of tech.</li>
+        <li><strong>Speaking</strong> &ndash; conferences, internal events, podcasts. Payments and BNPL, building and merging product and engineering orgs, and what AI is actually doing to how companies run. English or German.</li>
+        <li><strong>Advisory</strong> (time permitting) &ndash; founders and first-time product or tech leaders untangling org design, hiring, and building in regulated markets. Pro bono when the cause is right.</li>
+        <li><strong>Networking</strong> &ndash; CPOs, CTOs and other leaders in payments, fintech, or any industry doing something I haven&rsquo;t seen before.</li>
+      </ul>
+      <p class="open-ignore">Pushy sales pitches get the reply they earn. (None.)</p>
+      <p class="open-note">languages: german, english, croatian, serbian &ndash; all native &middot; tz: europe/berlin</p>
     </div>
   </section>
 
