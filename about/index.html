@@ -156,16 +156,8 @@ h1 .slashes { color: var(--accent); }
 
 .lede { font-size: var(--text-l); color: var(--ink-soft); max-width: var(--measure); margin-bottom: 2rem; }
 
-.about-photo {
-  float: right; width: 15rem; max-width: 42%; height: auto;
-  margin: 0.4rem 0 1rem 1.75rem;
-  border-radius: 2px;
-  mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
-}
-@media (max-width: 40rem) {
-  .about-photo { float: none; width: 12rem; margin: 0 0 1.5rem; }
-}
+.about-hero { margin-bottom: 2.5rem; }
+.about-hero img { width: 100%; height: auto; border-radius: 3px; }
 
 .prose p { max-width: var(--measure); margin-bottom: 1.1rem; color: var(--ink-soft); }
 .prose p:last-child { margin-bottom: 0; }
@@ -211,14 +203,14 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
       business from nearly every seat.
     </p>
 
-    <div class="prose">
-      <picture>
-        <source srcset="/assets/matthias-cutout.avif" type="image/avif">
-        <source srcset="/assets/matthias-cutout.webp" type="image/webp">
-        <img class="about-photo" src="/assets/matthias-cutout.png"
-             alt="Portrait of Matthias Leyendecker" width="800" height="888">
-      </picture>
+    <picture class="about-hero">
+      <source srcset="/assets/about-headshot.avif" type="image/avif">
+      <source srcset="/assets/about-headshot.webp" type="image/webp">
+      <img src="/assets/about-headshot.jpg" alt="Portrait of Matthias Leyendecker"
+           width="1600" height="1597" fetchpriority="high">
+    </picture>
 
+    <div class="prose">
       <p>
         I started in sales, carrying a BNPL contract into the market at
         <strong>arvato</strong> (Bertelsmann) &ndash; which is where I learned
