@@ -144,6 +144,7 @@ header nav a {
   color: var(--ink-soft); text-decoration: none;
 }
 header nav a:hover { color: var(--hot); }
+header nav a[aria-current] { color: var(--ink); }
 
 main { padding-block: clamp(3rem, 8vh, 5rem); }
 
@@ -154,12 +155,12 @@ h1 {
 }
 h1 .slashes { color: var(--accent); }
 
-.lede { font-size: var(--text-l); color: var(--ink-soft); max-width: var(--measure); margin-bottom: 2rem; }
+.lede { font-size: var(--text-l); color: var(--ink-soft); margin-bottom: 2rem; }
 
 .about-hero { margin-bottom: 2.5rem; }
 .about-hero img { width: 100%; height: auto; border-radius: 3px; }
 
-.prose p { max-width: var(--measure); margin-bottom: 1.1rem; color: var(--ink-soft); }
+.prose p { margin-bottom: 1.1rem; color: var(--ink-soft); }
 .prose p:last-child { margin-bottom: 0; }
 .prose strong { color: var(--ink); font-weight: 600; }
 
@@ -188,6 +189,7 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
   <div class="wrap">
     <a class="logo" href="/"><span class="slashes">//</span> <span class="name-full">matthias leyendecker</span><span class="name-short">ml</span><span class="cursor">_</span></a>
     <nav aria-label="Site">
+      <a href="/about" aria-current="page">about</a>
       <a href="/#writing">writing</a>
       <a href="https://terminalvelocity.blog" target="_blank" rel="noopener noreferrer">blog</a>
       <a href="/#contact">contact</a>
