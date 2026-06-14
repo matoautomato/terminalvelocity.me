@@ -266,42 +266,25 @@ header nav a:hover { color: var(--hot); }
 .btn.solid { background: var(--accent); color: var(--accent-ink); }
 .btn.solid:hover { background: var(--hot); border-color: var(--hot); color: var(--accent-ink); }
 
-/* ---- four vantage points ---- */
-.vantage-intro { font-size: var(--text-2xl); font-weight: 400; line-height: 1.35; margin-bottom: 3rem; }
-.vantage {
-  display: grid; gap: 1rem;
-  grid-template-columns: 1fr;
-  counter-reset: vantage;
+/* ---- writing ---- */
+.writing-list { display: grid; gap: 0; }
+.writing-list li {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 1rem;
+  padding-block: 1.1rem; border-bottom: 1px solid var(--line);
 }
-/* explicit 1 / 2 / 4 steps - auto-fit would strand a 3+1 orphan */
-@media (min-width: 48rem) {
-  .vantage { grid-template-columns: repeat(2, 1fr); }
+.writing-list li:first-child { border-top: 1px solid var(--line); }
+.writing-list a {
+  font-family: var(--mono); font-size: var(--text-l); color: var(--ink);
+  text-decoration: none; line-height: 1.3;
 }
-@media (min-width: 64rem) {
-  .vantage { grid-template-columns: repeat(4, 1fr); }
+.writing-list a:hover { color: var(--hot); }
+.writing-date {
+  font-family: var(--mono); font-size: var(--text-xs); color: var(--ink-soft);
+  letter-spacing: 0.08em; text-transform: uppercase; margin-left: auto;
 }
-.vantage li {
-  background: var(--bg-raised); border: 1px solid var(--line);
-  border-left: 3px solid var(--accent); border-radius: 2px;
-  padding: 1.5rem;
-}
-.vantage .step {
-  font-family: var(--mono); font-size: var(--text-xs);
-  letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
-  display: block; margin-bottom: 0.75rem;
-}
-.vantage h3 { font-family: var(--mono); font-size: 1.05rem; line-height: 1.35; margin-bottom: 0.6rem; }
-.vantage h3 span { display: block; font-weight: 400; font-size: var(--text-s); color: var(--ink-soft); }
-.vantage p { font-size: var(--text-s); color: var(--ink-soft); }
-
-/* ---- receipts ---- */
-.receipts { display: grid; gap: 1.1rem; }
-.receipts li { padding-left: 1.6rem; position: relative; }
-.receipts li::before {
-  content: ">"; position: absolute; left: 0;
-  font-family: var(--mono); color: var(--accent); font-weight: 700;
-}
-.receipts strong { font-weight: 600; }
+.writing-more { margin-top: 1.5rem; font-family: var(--mono); font-size: var(--text-s); }
+.writing-more a { color: var(--accent); text-decoration: none; }
+.writing-more a:hover { color: var(--hot); }
 
 /* ---- open to ---- */
 .open-list { display: grid; gap: 1.25rem 3rem; }
@@ -344,7 +327,7 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
   <div class="wrap">
     <a class="logo" href="/" aria-label="Matthias Leyendecker, home"><span class="slashes">//</span> <span class="name-full">matthias leyendecker</span><span class="name-short">ml</span><span class="cursor">_</span></a>
     <nav aria-label="Site">
-      <a href="#track">track record</a>
+      <a href="#writing">writing</a>
       <a href="https://terminalvelocity.blog" target="_blank" rel="noopener noreferrer">blog</a>
       <a href="#contact">contact</a>
     </nav>
@@ -386,63 +369,25 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
     </div>
   </section>
 
-  <!-- ============ four vantage points: the 30-second read ============ -->
-  <section id="track" aria-labelledby="track-h">
+  <!-- ============ writing: the blog is the engine ============ -->
+  <section id="writing" aria-labelledby="writing-h">
     <div class="wrap">
-      <h2 id="track-h"><span class="slashes">//</span> the long way around</h2>
-      <p class="vantage-intro">
-        BNPL is the domain I know from every seat at the table: I&rsquo;ve sold
-        the contract, owned the roadmap, merged the platforms and co-founded the
-        company. That depth is why I can usually tell you where a deal, build
-        or integration will break before it does.
-      </p>
-      <ol class="vantage">
+      <h2 id="writing-h"><span class="slashes">//</span> writing</h2>
+      <ul class="writing-list">
         <li>
-          <span class="step">01 &middot; sold it</span>
-          <h3>arvato Financial Solutions <span>Bertelsmann</span></h3>
-          <p>Carried the BNPL contract into the market. Learned what merchants
-             actually buy, what they think they&rsquo;re buying, and the gap a
-             product team inherits between the two.</p>
+          <a href="https://terminalvelocity.blog/posts/myth-of-collapsing-build-costs/" target="_blank" rel="noopener noreferrer">The myth of collapsing build costs</a>
+          <span class="writing-date">jun 2026</span>
         </li>
         <li>
-          <span class="step">02 &middot; built it</span>
-          <h3>Paysafe Pay Later <span>payolution &middot; Head of Product</span></h3>
-          <p>Ran product for a white-label BNPL platform serving banks and
-             merchants across regulated European markets. Owned the roadmap,
-             the backlog and the consequences.</p>
+          <a href="https://terminalvelocity.blog/posts/ic-work-pay-cut/" target="_blank" rel="noopener noreferrer">IC work is not a career flex, but a pay cut</a>
+          <span class="writing-date">may 2026</span>
         </li>
         <li>
-          <span class="step">03 &middot; merged it</span>
-          <h3>Unzer <span>post-merger platform integration</span></h3>
-          <p>Merged payment platforms, product orgs and roadmaps after the
-             acquisition without dropping merchants or transaction volume on
-             the floor.</p>
+          <a href="https://terminalvelocity.blog/posts/pm-job-of-context/" target="_blank" rel="noopener noreferrer">Product management is a job of context</a>
+          <span class="writing-date">may 2026</span>
         </li>
-        <li>
-          <span class="step">04 &middot; founding it</span>
-          <h3>Payla <span>CPO &amp; Co-Founder</span></h3>
-          <p>BNPL infrastructure built for CCD2 and PSD3 from day one,
-             not retrofitted once the auditors show up.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ============ receipts ============ -->
-  <section aria-labelledby="receipts-h">
-    <div class="wrap">
-      <h2 id="receipts-h"><span class="slashes">//</span> receipts</h2>
-      <ul class="receipts">
-        <li>Fintech platform, <strong>zero to live in twelve months</strong>, in a regulated market.</li>
-        <li>Product organisations <strong>built from scratch</strong> &ndash; hiring, structure, culture, standards.</li>
-        <li>Remote teams scaled <strong>across five time zones</strong>.</li>
-        <li>Regulatory fluency that survives contact with lawyers: <strong>CCD2, PSD3, FCA</strong>.</li>
-        <li>Thinks in public at <a href="https://terminalvelocity.blog" target="_blank" rel="noopener noreferrer">terminalvelocity.blog</a>
-            &ndash; BNPL vs. traditional banking, why remote work doesn&rsquo;t exist,
-            what AI does to organisations.</li>
-        <li>Still ships code: constraint solvers, static-site tooling, this page &ndash;
-            <a href="https://github.com/matoautomato" target="_blank" rel="noopener noreferrer">github.com/matoautomato</a>.</li>
       </ul>
+      <p class="writing-more"><a href="https://terminalvelocity.blog" target="_blank" rel="noopener noreferrer">more at terminalvelocity.blog &rarr;</a></p>
     </div>
   </section>
 
