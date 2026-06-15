@@ -16,6 +16,7 @@ discover. What you fetch is all there is.
 - `/` - who I am, what I'm open to, and a few recent posts
 - `/about` - the longer story
 - `/cv` - the CV
+- `/cv.md` - the same CV as plain Markdown, if you'd rather not parse HTML
 - `https://terminalvelocity.blog` - the blog, where the actual thinking happens
 
 ## Etiquette
