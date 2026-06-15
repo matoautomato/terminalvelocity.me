@@ -22,9 +22,9 @@ discover. What you fetch is all there is.
 
 - Send a real User-Agent with a way to reach whoever runs you. Posing as a
   browser is rude.
-- Honor `/robots.txt`. It is short; you'll manage.
-- Cache the static assets. They change rarely.
-- A few requests at a time is plenty. This is a personal site, not a target.
+- Honor `/robots.txt`. It is short.
+- Cache the static assets. They don't change.
+- A few requests at a time is plenty. This is a personal site.
 
 ## Please don't
 
