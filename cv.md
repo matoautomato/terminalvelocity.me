@@ -2,7 +2,7 @@
 
 **Chief Product Officer & Co-Founder**
 
-Karlsruhe, Germany · mlyndckr@gmail.com · matthiasleyendecker.com · [LinkedIn](https://linkedin.com/in/mlyndckr/)
+Karlsruhe, Germany · matthias.leyendecker@proton.me · matthiasleyendecker.com · [LinkedIn](https://linkedin.com/in/mlyndckr/)
 
 ## Executive Summary
 
