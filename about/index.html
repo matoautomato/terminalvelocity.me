@@ -164,10 +164,11 @@ h1 .slashes { color: var(--accent); }
 .prose p:last-child { margin-bottom: 0; }
 .prose strong { color: var(--ink); font-weight: 600; }
 
-.about-foot {
-  clear: both; margin-top: 2.5rem; padding-top: 1.5rem;
-  border-top: 1px solid var(--line);
-  font-family: var(--mono); font-size: var(--text-s); color: var(--ink-soft);
+.lessons { display: grid; gap: 0.6rem; margin: 0.25rem 0 1.6rem; }
+.lessons li { padding-left: 1.5rem; position: relative; color: var(--ink); }
+.lessons li::before {
+  content: ">"; position: absolute; left: 0;
+  font-family: var(--mono); color: var(--accent); font-weight: 700;
 }
 
 footer { border-top: 1px solid var(--line); padding-block: 2rem 3rem; }
@@ -214,36 +215,38 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
 
     <div class="prose">
       <p>
-        I started in sales, carrying a BNPL contract into the market at
-        <strong>arvato</strong> (Bertelsmann) &ndash; which is where I learned
-        what merchants actually buy, as opposed to what they&rsquo;re sold. That
-        pulled me into product.
+        I was incredibly lucky to enter fintech and payments during one of its
+        most transformative phases. I lived through the explosion of mobile
+        commerce, the chaotic growth of fintechs and marketplaces, massive
+        consolidations and PE swooping in, increasing technical complexity and
+        sudden enforced profitability once interest rates crept back up. Today we
+        are witnessing the tension between regulatory maturity and the AI gold
+        rush into the headless economy.
       </p>
       <p>
-        As Head of Product at <strong>Paysafe Pay Later</strong> I ran a
-        white-label BNPL platform for banks and merchants across regulated
-        European markets, and took one from zero to live in twelve months. When
-        <strong>Unzer</strong> acquired the business, I merged the platforms, the
-        product orgs and the roadmaps without dropping merchants or volume on the
-        floor.
+        During this time I sat at almost every seat at the table, from selling
+        complex financial solutions at arvato / Bertelsmann, to building these
+        platforms and expanding them out of DACH into the UK and US markets
+        during my tenure at Paysafe. Later I led a technical and commercial
+        merger of two BNPL platforms at Unzer, until I decided to co-found my own
+        company, to build a first-principles BNPL platform that slots as a
+        feature into any ecosystem. Here I currently serve product, design and
+        engineering as CPO.
       </p>
+      <p>Some important things I learned:</p>
+      <ul class="lessons">
+        <li>Great teams are very hard to form, but radical candor is always the first step.</li>
+        <li>Even the best architecture decisions will eventually come back to haunt you.</li>
+        <li>There&rsquo;s no universal product playbook, your context is everything.</li>
+        <li>Being a jack of all trades can make you a master of many.</li>
+        <li>And speed is by far the most important KPI.</li>
+      </ul>
       <p>
-        Now I&rsquo;m co-founder and CPO at <strong>Payla</strong>, where I own
-        product, design and engineering, building BNPL infrastructure for the
-        CCD2 and PSD3 era. Somewhere along the way the work stopped being purely
-        product and turned technical too &ndash; I read the code, I ship side
-        projects, and I&rsquo;m a better product leader for it.
-      </p>
-      <p>
-        I work in English (and have since 2012), think in German, and count in
-        Croatian and Serbian. I live near the Black Forest with my partner and
-        our two kids. Off the clock it&rsquo;s heavy or ambient music,
-        photography, pen-and-paper RPGs, or reviving old computers.
-      </p>
-
-      <p class="about-foot">
-        Want the formal version? The <a href="/cv" target="_blank" rel="noopener noreferrer">CV</a>
-        is one click away &ndash; or just <a href="mailto:matthias.leyendecker@proton.me">email me</a>.
+        I live with my family north of Germany&rsquo;s Black Forest, and when not
+        busy with my work I can frequently be found at heavy metal gigs, touring
+        the outdoors with my camera, cycling along the river Rhine, playing D&amp;D
+        with my kids or turning old MacBooks into Linux servers. My e-reader never
+        leaves my side.
       </p>
     </div>
   </div>
