@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>privacy – Matthias Leyendecker</title>
-<meta name="description" content="No cookies, no JavaScript, no trackers, no forms. Cloudflare serves this site; that is the whole story.">
-<link rel="canonical" href="https://terminalvelocity.me/privacy/">
-<meta property="og:title" content="privacy – Matthias Leyendecker">
-<meta property="og:description" content="No cookies, no JavaScript, no trackers, no forms. Cloudflare serves this site; that is the whole story.">
+<title>about – matthias leyendecker</title>
+<meta name="description" content="Fifteen years in fintech, payments from nearly every seat: sales, product, post-merger integration, and now co-founder and CPO at Payla.">
+<link rel="canonical" href="https://terminalvelocity.me/about/">
+<meta property="og:title" content="about – Matthias Leyendecker">
+<meta property="og:description" content="Fifteen years in fintech, payments from nearly every seat: sales, product, post-merger integration, and now co-founder and CPO at Payla.">
 <meta property="og:image" content="https://terminalvelocity.me/assets/og-card.png">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
@@ -58,7 +58,7 @@
   --text-xl: clamp(1.45rem, 1.2rem + 1.1vw, 1.9rem);
   --text-2xl: clamp(1.8rem, 1.4rem + 1.8vw, 2.5rem);
   --wrap: 52rem;
-  --measure: 62ch;
+  --measure: 64ch;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -79,7 +79,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 body, h1, h2, h3, p, ol, ul, dl, dd, figure { margin: 0; }
 ol[class], ul[class] { padding: 0; list-style: none; }
-img, svg { display: block; max-width: 100%; }
+img, picture, svg { display: block; max-width: 100%; }
 
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
@@ -144,6 +144,7 @@ header nav a {
   color: var(--ink-soft); text-decoration: none;
 }
 header nav a:hover { color: var(--hot); }
+header nav a[aria-current] { color: var(--ink); }
 
 main { padding-block: clamp(3rem, 8vh, 5rem); }
 
@@ -154,19 +155,21 @@ h1 {
 }
 h1 .slashes { color: var(--accent); }
 
-.lede { font-size: var(--text-l); color: var(--ink-soft); margin-bottom: 2.5rem; }
+.lede { font-size: var(--text-l); color: var(--ink-soft); margin-bottom: 2rem; }
 
-.prose h2 {
-  font-family: var(--mono); font-weight: 700; font-size: var(--text-l);
-  text-transform: lowercase; letter-spacing: -0.01em;
-  margin-block: 2.5rem 0.75rem;
-}
-.prose h2 .slashes { color: var(--accent); }
-.prose p, .prose ul, .prose dl { margin-bottom: 1rem; color: var(--ink-soft); }
-.prose ul { padding-left: 1.2rem; }
-.prose li { margin-bottom: 0.4rem; }
+.about-hero { margin-bottom: 2.5rem; }
+.about-hero img { width: 100%; height: auto; border-radius: 3px; }
+
+.prose p { margin-bottom: 1.1rem; color: var(--ink-soft); }
+.prose p:last-child { margin-bottom: 0; }
 .prose strong { color: var(--ink); font-weight: 600; }
-.prose address { font-style: normal; }
+
+.lessons { display: grid; gap: 0.6rem; margin: 0.25rem 0 1.6rem; }
+.lessons li { padding-left: 1.5rem; position: relative; color: var(--ink); }
+.lessons li::before {
+  content: ">"; position: absolute; left: 0;
+  font-family: var(--mono); color: var(--accent); font-weight: 700;
+}
 
 footer { border-top: 1px solid var(--line); padding-block: 2rem 3rem; }
 footer .wrap {
@@ -187,50 +190,58 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
   <div class="wrap">
     <a class="logo" href="/"><span class="slashes">//</span> <span class="name-full">matthias leyendecker</span><span class="name-short">ml</span><span class="cursor">_</span></a>
     <nav aria-label="Site">
-      <a href="/">back to site</a>
+      <a href="/about" aria-current="page">about</a>
+      <a href="https://terminalvelocity.blog" target="_blank" rel="noopener noreferrer">blog</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
   <div class="wrap">
-    <h1><span class="slashes">//</span> privacy<span class="cursor">_</span></h1>
-    <p class="lede">The short version: this site collects nothing.</p>
+    <h1><span class="slashes">//</span> about<span class="cursor">_</span></h1>
+
+    <picture class="about-hero">
+      <source srcset="/assets/about-headshot.avif" type="image/avif">
+      <source srcset="/assets/about-headshot.webp" type="image/webp">
+      <img src="/assets/about-headshot.jpg" alt="Portrait of Matthias Leyendecker"
+           width="1600" height="1600" fetchpriority="high">
+    </picture>
 
     <div class="prose">
-      <h2><span class="slashes">//</span> what this site does</h2>
-      <p>This is a static website. It sets <strong>no cookies</strong>, runs
-         <strong>no JavaScript</strong>, loads <strong>no third-party resources</strong>
-         (fonts are self-hosted), uses <strong>no analytics</strong> and has
-         <strong>no forms</strong>. There is nothing here that tracks you.</p>
-
-      <h2><span class="slashes">//</span> hosting</h2>
-      <p>The site is served by <strong>Cloudflare Pages</strong> (Cloudflare, Inc.).
-         Like every web server, Cloudflare processes technical connection data
-         (IP address, user agent, time of request) to deliver the page and to keep
-         the service secure &ndash; legal basis: legitimate interest,
-         Art.&nbsp;6&nbsp;(1)(f) GDPR. I have no access to and keep no copy of this data.
-         See the <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare privacy policy</a>.</p>
-
-      <h2><span class="slashes">//</span> email</h2>
-      <p>If you email me, I get your address and whatever you write &ndash; that's the
-         point of email. I use it to reply and for nothing else.</p>
-
-      <h2><span class="slashes">//</span> your rights</h2>
-      <p>Under the GDPR you have the right to access, rectification, erasure,
-         restriction of processing, data portability and objection. Since this site
-         stores nothing about you, there is usually nothing to exercise them on &ndash;
-         but you can always write to
-         <a href="mailto:matthias.leyendecker@proton.me">matthias.leyendecker@proton.me</a>,
-         or complain to the supervisory authority,
-         the <a href="https://www.baden-wuerttemberg.datenschutz.de/" rel="noopener">Landesbeauftragter
-         f&uuml;r den Datenschutz und die Informationsfreiheit Baden-W&uuml;rttemberg</a>.</p>
-
-      <h2><span class="slashes">//</span> controller</h2>
-      <p>Matthias Leyendecker<br>
-         Leopoldstr. 8<br>
-         76131 Karlsruhe, Germany<br>
-         <a href="mailto:matthias.leyendecker@proton.me">matthias.leyendecker@proton.me</a></p>
+      <p>
+        I was incredibly lucky to enter fintech and payments during one of its
+        most transformative phases. I lived through the explosion of mobile
+        commerce, the chaotic growth of fintechs and marketplaces, massive
+        consolidations and PE swooping in, increasing technical complexity and
+        sudden enforced profitability once interest rates crept back up. Today we
+        are witnessing the tension between regulatory maturity and the AI gold
+        rush into the headless economy.
+      </p>
+      <p>
+        During this time I sat at almost every seat at the table, from selling
+        complex financial solutions at arvato / Bertelsmann, to building these
+        platforms and expanding them out of DACH into the UK and US markets
+        during my tenure at Paysafe. Later I led a technical and commercial
+        merger of two BNPL platforms at Unzer, until I decided to co-found my own
+        company, to build a first-principles BNPL platform that slots as a
+        feature into any ecosystem. Here I currently serve product, design and
+        engineering as CPO.
+      </p>
+      <p>Some important things I learned:</p>
+      <ul class="lessons">
+        <li>Great teams are very hard to form, but <a href="https://en.wikipedia.org/wiki/Radical_Candor" target="_blank" rel="noopener noreferrer">radical candor</a> is always the first step.</li>
+        <li>Even the best architecture decisions will eventually come back to haunt you.</li>
+        <li>There&rsquo;s no universal product playbook, your context is everything.</li>
+        <li>Being a jack of all trades can make you a master of many.</li>
+        <li>And speed is by far the most important KPI.</li>
+      </ul>
+      <p>
+        I live with my family north of Germany&rsquo;s Black Forest, and when not
+        busy with my work I can frequently be found at heavy metal gigs, touring
+        the outdoors with my camera, cycling along the river Rhine, playing D&amp;D
+        with my kids or turning old MacBooks into Linux servers. My e-reader never
+        leaves my side.
+      </p>
     </div>
   </div>
 </main>

@@ -1,0 +1,8 @@
+# terminalvelocity.me
+# Humans and well-behaved bots welcome. Agents, start at /agents.md.
+
+User-agent: *
+Allow: /
+
+# Cloudflare content signals: index for search, do not train AI models on this.
+Content-Signal: search=yes, ai-train=no

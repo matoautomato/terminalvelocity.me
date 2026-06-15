@@ -1,22 +1,27 @@
 # terminalvelocity.me
 
-Personal / professional website. Static HTML, Tailwind CSS, vanilla JS. No frameworks.
-
-## Stack
-
-- **HTML/CSS**: Static pages assembled from components via `build.py`
-- **Tailwind CSS v3.4**: Compiled to `assets/styles.css`
-- **JavaScript**: Vanilla only (typewriter animations, language toggle, glow effect)
-- **Python**: Page assembly (`build.py`)
+Personal site. Plain static HTML and CSS – no JavaScript, no build step, no dependencies, no third-party requests. Fonts are self-hosted (JetBrains Mono + Inter, latin woff2, SIL OFL).
 
 ## Development
 
+There is nothing to build. Edit the HTML, open it in a browser.
+
 ```bash
-npm install
-npm run dev      # build + local server on :8000
-npm run build    # tailwind compile + page assembly
+python3 -m http.server 8000   # local preview on :8000
 ```
+
+## Deploy
+
+Cloudflare Pages serves the repo as-is from `main`.
+
+## Structure
+
+- `index.html` – the whole homepage, CSS inlined
+- `privacy/`, `imprint/`, `cv/`, `thanks/`, `404.html` – sub-pages, same design tokens
+- `assets/` – portrait (AVIF/WebP/PNG), og-card, favicon, `fonts/`
+- `design.md` – design system
+- `_redirects` – Cloudflare Pages redirects (retired blog routes)
 
 ## Blog
 
-The blog has moved to [terminalvelocity.blog](https://terminalvelocity.blog) — built with Hugo and Bear Cub, source at [matoautomato/terminalvelocity.blog](https://github.com/matoautomato/terminalvelocity.blog).
+The blog lives at [terminalvelocity.blog](https://terminalvelocity.blog) – Hugo + Bear Cub, source at [matoautomato/terminalvelocity.blog](https://github.com/matoautomato/terminalvelocity.blog).
