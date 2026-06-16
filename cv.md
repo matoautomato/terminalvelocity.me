@@ -19,7 +19,7 @@ Product-Led Growth & Strategy · Venture Building & Scaling · P&L Ownership · 
 
 Co-founded a B2B fintech company from zero to servicing enterprise clients across Europe.
 
-- Built a white-label BNPL platform, reaching market feature parity in 14 months with MVP live within 5
+- Built a white-label BNPL platform, reaching market feature parity in 14 months with MVP live within 5 months
 - Achieved 2.4x average annual revenue growth, scaling with a fully distributed team across 12 European countries
 - Drove fundraising as product and technology co-founder, shaping the product narrative that secured investment rounds
 - Scaled cross-functional product, design, and engineering teams, introducing agile processes and maintaining 99.9% platform uptime
