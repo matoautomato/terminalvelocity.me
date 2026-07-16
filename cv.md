@@ -4,11 +4,11 @@
 
 Karlsruhe, Germany · matthias.leyendecker@proton.me · matthiasleyendecker.com · [LinkedIn](https://linkedin.com/in/mlyndckr/)
 
-## Executive Summary
+## Summary
 
 Product and technology leader who builds platforms from zero and transforms existing ones at scale. 15+ years in fintech, payments, BNPL and fraud prevention, across start-up, corporate and investor-backed environments. Went from enterprise sales through product leadership to co-founding a venture. At home in data-heavy, highly regulated B2B across US, UK and EU markets. Equally comfortable defining platform architecture, building distributed product, design and engineering organisations, and closing enterprise deals and partnerships.
 
-## Core Competencies
+## Skills
 
 Product-Led Growth & Strategy · Venture Building · P&L Ownership · Scaling Distributed Teams · Board & Stakeholder Management · Enterprise Sales & Partnerships · Platform & API Architecture · M&A Integration & Consolidation · Regulatory Compliance & Certification · Go-to-Market Strategy · AI Strategy & Evaluation · AI Integration & Automation · Payments · E-Commerce · BNPL
 
@@ -52,7 +52,7 @@ Scaled the product function and BNPL platform across 5 time zones, contributing 
 
 - Launched one of the first BNPL POS solutions in the DACH region in partnership with Decathlon, delivering an MVP within 2 months and driving 80% YOY growth
 - Led international expansion into the US, UK and Netherlands, adapting regulatory frameworks, rebuilding onboarding and risk/fraud systems, and hiring local product and analytics teams
-- Built the product function from 2 to 7 people, establishing all discovery practices, frameworks, and processes from scratch
+- Built the product function from 2 to 7 people, establishing all discovery practices, frameworks and processes from scratch
 - Owned full product lifecycle across multiple BNPL products, from pricing and positioning to go-to-market, delivering consistently through annual PE-driven strategy shifts
 
 ### Account Manager — arvato Financial Solutions
