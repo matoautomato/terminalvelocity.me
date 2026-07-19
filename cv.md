@@ -10,7 +10,7 @@ Product and technology leader who builds platforms from zero and transforms exis
 
 ## Skills
 
-Product Strategy & Vision · Product Discovery & Research · Product-Led Growth · Venture Building · P&L Ownership · Scaling Distributed Teams · Board & Stakeholder Management · Enterprise Sales & Partnerships · Go-to-Market Strategy · Platform & API Architecture · AI Strategy & Integration · Payments · E-Commerce · BNPL
+Product Strategy & Vision · Product Discovery & Research · Product-Led Growth · Product Delivery · Venture Building · P&L Ownership · Scaling Distributed Teams · Board & Stakeholder Management · Enterprise Sales & Partnerships · Go-to-Market Strategy · Platform & API Architecture · AI Strategy & Integration · Payments · E-Commerce · BNPL
 
 ## Key Achievements
 
