@@ -369,15 +369,16 @@
         border-color: var(--color-border);
       }
 
-      /* De-grid keyword sections: keep the heading directly above its items in the
-         extracted text stream (flex layout can scramble reading order). Screen keeps the tag grid. */
-      .cv-competencies ul,
+      /* De-grid languages and interests into inline comma lists so the heading
+         stays directly above its items in the extracted text stream (flex can
+         scramble reading order). Skills and certifications keep their tag boxes:
+         short single phrases extract cleanly in DOM order, and the boxes match
+         the on-screen design in the PDF. */
       .cv-languages ul,
       .cv-interests ul {
         display: block;
       }
 
-      .cv-competencies li,
       .cv-languages li,
       .cv-interests li {
         display: inline;
@@ -385,10 +386,9 @@
         border: none;
         background: none;
         border-radius: 0;
-        font-size: inherit;
+        font-size: 0.85rem;
       }
 
-      .cv-competencies li:not(:last-child)::after,
       .cv-languages li:not(:last-child)::after,
       .cv-interests li:not(:last-child)::after {
         content: ", ";
@@ -423,6 +423,7 @@
         <li>Product Strategy &amp; Vision</li>
         <li>Product Discovery &amp; Research</li>
         <li>Product-Led Growth</li>
+        <li>Product Delivery</li>
         <li>Venture Building</li>
         <li>P&amp;L Ownership</li>
         <li>Scaling Distributed Teams</li>
