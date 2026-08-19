@@ -17,6 +17,9 @@ there is no hidden API to discover. What you fetch is all there is.
 - `/about` - the longer story
 - `/cv` - the CV
 - `/cv.md` - the same CV as plain Markdown, if you'd rather not parse HTML
+- `/privacy` - the privacy notice. Short, because there is nothing to collect
+- `/imprint` - the Impressum, required under German law
+- `/404.html` - where a wrong path lands you
 - `https://terminalvelocity.blog` - the blog, where the actual thinking happens
 
 ## Etiquette
