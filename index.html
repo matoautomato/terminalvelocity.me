@@ -84,6 +84,7 @@
   --accent-ink: #ffffff;
   --hot: #a85b07;
   --ok: #2e7d4f;
+  --no: #b3261e;
 
   /* type */
   --mono: "JetBrains Mono", ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
@@ -114,6 +115,7 @@
     --accent-ink: #15141a;
     --hot: #df8e1d;
     --ok: #5fbd84;
+    --no: #e57373;
   }
 }
 
@@ -277,8 +279,8 @@ header nav a:hover { color: var(--hot); }
   font-family: var(--mono); color: var(--ok); font-weight: 700;
 }
 .open-list strong { font-weight: 600; color: var(--ink); }
-.open-list li.closed::before { content: "\2013"; color: var(--ink-soft); }
-.open-list li.closed strong { color: var(--ink-soft); }
+.open-list li.closed::before { content: "\2013"; color: var(--no); }
+.open-list .status { font-style: italic; }
 .open-ignore { margin-top: 2rem; font-family: var(--mono); font-size: var(--text-s); color: var(--ink-soft); }
 .open-note { margin-top: 0.75rem; font-family: var(--mono); font-size: var(--text-s); color: var(--ink-soft); }
 
@@ -378,7 +380,7 @@ footer .legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; 
         <li><strong>Speaking</strong> at conferences, internal events and podcasts: on payments infrastructure, the headless economy, and building product orgs and cultures that ship.</li>
         <li><strong>Advisory</strong> for payments in-housing, embedded-finance strategy, investment due diligence, or helping founders stand up tech orgs. For the right social cause, pro bono.</li>
         <li><strong>Networking</strong> with people in fintech and payments, or any founder building something interesting. Let&rsquo;s swap book recommendations.</li>
-        <li class="closed"><strong>Fractional or interim</strong>: embedding into your team for a while to achieve a specific outcome. No capacity at the moment.</li>
+        <li class="closed"><strong>Fractional or interim</strong>: embedding into your team for a while to achieve a specific outcome. <em class="status">No capacity at the moment.</em></li>
       </ul>
       <p class="open-note">languages: german, english, serbian, croatian &ndash; all native &middot; tz: europe/berlin</p>
     </div>
