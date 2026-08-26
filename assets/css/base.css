@@ -136,21 +136,25 @@ header nav a {
 header nav a:hover { color: var(--hot); }
 header nav a[aria-current] { color: var(--ink); }
 
-/* ---- theme switch ----
-   Hidden until the inline head script marks the document as scripted, so a
-   visitor without JS gets no dead control - just the OS preference. */
-.theme-switch { display: none; margin-left: auto; align-items: baseline; gap: 0.4rem; }
-:root.has-js .theme-switch { display: flex; }
-.theme-switch button {
-  font-family: var(--mono); font-size: var(--text-s); text-transform: lowercase;
-  color: var(--ink-soft); background: none; border: 0; padding: 0;
-  cursor: pointer; transition: color 150ms;
+/* ---- theme toggle ---- */
+.theme-toggle {
+  display: none; flex: none; align-self: center; margin-left: auto;
+  background: none; border: 0; padding: 6px; line-height: 0;
+  color: var(--ink-soft); cursor: pointer; transition: color 150ms;
 }
-.theme-switch button:hover { color: var(--hot); }
-.theme-switch button[aria-pressed="true"] { color: var(--ink); }
-.theme-switch .sep {
-  font-family: var(--mono); font-size: var(--text-s); color: var(--accent);
+:root.has-js .theme-toggle { display: block; }
+.theme-toggle:hover { color: var(--hot); }
+.theme-toggle svg { width: 20px; height: 20px; }
+.theme-toggle .sun { display: none; }
+.theme-toggle .moon { display: block; }
+@media (prefers-color-scheme: dark) {
+  .theme-toggle .sun { display: block; }
+  .theme-toggle .moon { display: none; }
 }
+:root[data-theme="light"] .theme-toggle .sun { display: none; }
+:root[data-theme="light"] .theme-toggle .moon { display: block; }
+:root[data-theme="dark"] .theme-toggle .sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .moon { display: none; }
 
 /* ---- footer ---- */
 footer { border-top: 1px solid var(--line); padding-block: 2rem 3rem; }
