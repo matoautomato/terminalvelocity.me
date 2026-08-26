@@ -1,6 +1,6 @@
 # terminalvelocity.me
 
-Personal site. Plain static HTML and CSS – no JavaScript, no build step, no dependencies, no third-party requests. Fonts are self-hosted (JetBrains Mono + Inter, latin woff2, SIL OFL).
+Personal site. Plain static HTML and CSS – no build step, no dependencies, no third-party requests. Fonts are self-hosted (JetBrains Mono + Inter, latin woff2, SIL OFL).
 
 ## Development
 

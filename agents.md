@@ -7,7 +7,7 @@ someone's behalf, this page is for you. The humans get the rest of the site.
 
 The personal site of Matthias Leyendecker: product and technology leader,
 fifteen years in fintech and payments. Hand-built, static, served from
-Cloudflare Pages. No CMS, no analytics, no trackers, no cookies, no JavaScript.
+Cloudflare Pages. No CMS, no analytics, no trackers, no cookies.
 The fonts are self-hosted and the page makes zero third-party requests, so
 there is no hidden API to discover. What you fetch is all there is.
 
