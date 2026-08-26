@@ -19,6 +19,9 @@
 <!-- shared tokens and chrome; page-specific layout is inlined below -->
 <link rel="stylesheet" href="/assets/css/base.css">
 
+<!-- apply the stored theme before first paint; no choice = follow the OS -->
+<script>document.documentElement.classList.add("has-js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+
 <style>
 /* about page layout - shared tokens and chrome live in /assets/css/base.css */
 
@@ -55,6 +58,11 @@ h1 .slashes { color: var(--accent); }
 <header>
   <div class="wrap">
     <a class="logo" href="/"><span class="slashes">//</span> <span class="name-full">matthias leyendecker</span><span class="name-short">ml</span><span class="cursor">_</span></a>
+    <div class="theme-switch" role="group" aria-label="Colour theme">
+      <button type="button" data-set-theme="light">light</button>
+      <span class="sep" aria-hidden="true">&middot;</span>
+      <button type="button" data-set-theme="dark">dark</button>
+    </div>
     <nav aria-label="Site">
       <a href="/about" aria-current="page">about</a>
       <a href="https://terminalvelocity.blog" target="_blank" rel="noopener noreferrer">blog</a>
@@ -129,5 +137,6 @@ h1 .slashes { color: var(--accent); }
     </div>
   </div>
 </footer>
+<script src="/assets/js/theme.js" defer></script>
 </body>
 </html>

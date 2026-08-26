@@ -27,17 +27,20 @@
 }
 
 :root {
-  /* color - light (warm paper + ink + one purple) */
-  --bg: #fcfbf7;
-  --bg-raised: #f4f3ee;
-  --ink: #1c1c1c;
-  --ink-soft: #45474a;
-  --line: #d9d8d1;
-  --accent: #5b4fae;
-  --accent-ink: #ffffff;
-  --hot: #a85b07;
-  --ok: #2e7d4f;
-  --no: #b3261e;
+  /* color - warm paper + ink + one purple, light() then dark().
+     No choice made means color-scheme follows the OS; the switch in the
+     header pins it by setting data-theme on <html>. */
+  color-scheme: light dark;
+  --bg:         light-dark(#fcfbf7, #15141a);
+  --bg-raised:  light-dark(#f4f3ee, #1d1c24);
+  --ink:        light-dark(#1c1c1c, #e9e7e1);
+  --ink-soft:   light-dark(#45474a, #a8a6b0);
+  --line:       light-dark(#d9d8d1, #2e2d38);
+  --accent:     light-dark(#5b4fae, #a89ae8);
+  --accent-ink: light-dark(#ffffff, #15141a);
+  --hot:        light-dark(#a85b07, #df8e1d);
+  --ok:         light-dark(#2e7d4f, #5fbd84);
+  --no:         light-dark(#b3261e, #e57373);
 
   /* type */
   --mono: "JetBrains Mono", ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
@@ -56,20 +59,8 @@
   --measure: 62ch;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #15141a;
-    --bg-raised: #1d1c24;
-    --ink: #e9e7e1;
-    --ink-soft: #a8a6b0;
-    --line: #2e2d38;
-    --accent: #a89ae8;
-    --accent-ink: #15141a;
-    --hot: #df8e1d;
-    --ok: #5fbd84;
-    --no: #e57373;
-  }
-}
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"]  { color-scheme: dark; }
 
 /* ---- reset-lite ---- */
 *, *::before, *::after { box-sizing: border-box; }
@@ -122,7 +113,8 @@ header {
   border-bottom: 1px solid var(--line);
 }
 header .wrap {
-  display: flex; justify-content: space-between; align-items: baseline;
+  display: flex; align-items: baseline;
+  gap: clamp(0.9rem, 3vw, 2rem);
   padding-block: 0.9rem;
 }
 .logo {
@@ -143,6 +135,22 @@ header nav a {
 }
 header nav a:hover { color: var(--hot); }
 header nav a[aria-current] { color: var(--ink); }
+
+/* ---- theme switch ----
+   Hidden until the inline head script marks the document as scripted, so a
+   visitor without JS gets no dead control - just the OS preference. */
+.theme-switch { display: none; margin-left: auto; align-items: baseline; gap: 0.4rem; }
+:root.has-js .theme-switch { display: flex; }
+.theme-switch button {
+  font-family: var(--mono); font-size: var(--text-s); text-transform: lowercase;
+  color: var(--ink-soft); background: none; border: 0; padding: 0;
+  cursor: pointer; transition: color 150ms;
+}
+.theme-switch button:hover { color: var(--hot); }
+.theme-switch button[aria-pressed="true"] { color: var(--ink); }
+.theme-switch .sep {
+  font-family: var(--mono); font-size: var(--text-s); color: var(--accent);
+}
 
 /* ---- footer ---- */
 footer { border-top: 1px solid var(--line); padding-block: 2rem 3rem; }
