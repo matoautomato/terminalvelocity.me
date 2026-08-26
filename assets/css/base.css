@@ -33,7 +33,6 @@
   --ink: #1c1c1c;
   --ink-soft: #45474a;
   --line: #d9d8d1;
-  --dot: #d3d2cb;
   --accent: #5b4fae;
   --accent-ink: #ffffff;
   --hot: #a85b07;
@@ -64,7 +63,6 @@
     --ink: #e9e7e1;
     --ink-soft: #a8a6b0;
     --line: #2e2d38;
-    --dot: #26252f;
     --accent: #a89ae8;
     --accent-ink: #15141a;
     --hot: #df8e1d;
@@ -91,9 +89,6 @@ body {
   line-height: 1.65;
   color: var(--ink);
   background-color: var(--bg);
-  /* the dot grid stays - it is the brand */
-  background-image: radial-gradient(var(--dot) 1px, transparent 1px);
-  background-size: 24px 24px;
   -webkit-font-smoothing: antialiased;
 }
 
